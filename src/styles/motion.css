@@ -1,0 +1,74 @@
+/* Scroll-driven motion. See MotionExperience.jsx and motion/scrollDirector.js.
+
+   Nothing here runs on its own clock. The director writes --mm-p (0..1) on a
+   tracked element from its position in the viewport, and everything below is a
+   pure function of that value — so scrolling back reverses the motion and
+   stopping halfway holds it halfway.
+
+   Children derive their own offset progress from the parent's single value via
+   --mm-i (their index), which keeps the sequencing without measuring each one.
+
+   These rules deliberately carry NO transition: the smoothing lives in the
+   director's damping, and a transition on top would fight the per-frame
+   updates and lag behind the scroll. */
+
+/* 1. Headings, word by word. */
+.mm-word {
+  --p: clamp(0, calc((var(--mm-p, 0) - var(--mm-i, 0) * .028) / .4), 1);
+  display: inline-block;
+  /* Floors matter more than they look. Mapping straight from 0 meant a heading
+     mid-reveal was genuinely absent rather than arriving, which is what made
+     the page read as empty while scrolling. */
+  opacity: calc(.24 + .76 * var(--p));
+  translate: 0 calc((1 - var(--p)) * .3em);
+}
+
+/* 2. Cards in a grid, in sequence. */
+.mm-stagger-item {
+  --p: clamp(0, calc((var(--mm-p, 0) - var(--mm-i, 0) * .05) / .45), 1);
+  opacity: calc(.26 + .74 * var(--p));
+  translate: 0 calc((1 - var(--p)) * 16px);
+}
+
+/* 3. A card's own contents, arriving behind the card. */
+.mm-cascade-item {
+  --p: clamp(0, calc((var(--mm-p, 0) - .06 - var(--mm-i, 0) * .04) / .42), 1);
+  opacity: calc(.32 + .68 * var(--p));
+  translate: 0 calc((1 - var(--p)) * 9px);
+}
+
+/* 4. Figures counting up — the one motion that is not scroll-driven, because
+      a number scrubbing back and forth reads as broken rather than considered. */
+.mm-counting {
+  font-variant-numeric: tabular-nums;
+}
+
+/* 5. Photographs wiping upward out of a slow zoom. */
+.mm-image {
+  --p: clamp(0, calc(var(--mm-p, 0) / .62), 1);
+  clip-path: inset(0 0 calc((1 - var(--p)) * 100%) 0);
+  scale: calc(1 + (1 - var(--p)) * .08);
+}
+
+/* 6. Panels that grow as they scroll in. */
+.mm-scrub {
+  scale: calc(.955 + .045 * var(--mm-scrub, 1));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mm-word,
+  .mm-stagger-item,
+  .mm-cascade-item {
+    opacity: 1;
+    translate: none;
+  }
+
+  .mm-image {
+    clip-path: none;
+    scale: 1;
+  }
+
+  .mm-scrub {
+    scale: 1;
+  }
+}

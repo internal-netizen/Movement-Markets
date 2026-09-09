@@ -1,0 +1,85 @@
+/* Scroll-driven motion for the design pages. Scoped under .mm-design so none
+   of it reaches the v1 page. Same contract as motion.css: every value is a
+   function of --mm-p, written by the director, with no transitions. */
+
+/* 1. Bands settling — the top-level rhythm the rest hangs off. */
+.mm-design .mm-band {
+  --p: clamp(0, calc(var(--mm-p, 0) / .7), 1);
+  opacity: var(--p);
+  translate: 0 calc((1 - var(--p)) * 40px);
+}
+
+/* 2. Hero layer parallax, off --mm-hero. .gh clips its own overflow, so the
+      drift cannot open a gap or cause horizontal overflow. */
+.mm-design .gh-grid {
+  translate: 0 calc(var(--mm-hero, 0) * 26px);
+}
+
+.mm-design .gh-aurora {
+  translate: 0 calc(var(--mm-hero, 0) * 54px);
+  will-change: translate;
+}
+
+.mm-design .gh-tags {
+  translate: 0 calc(var(--mm-hero, 0) * -18px);
+}
+
+/* 3. Spread bars growing off the baseline. The container is align-items:
+      flex-end, so scaleY reads as extending up from the axis. */
+.mm-design .mm-bars > * {
+  --p: clamp(0, calc((var(--mm-p, 0) - var(--mm-i, 0) * .05) / .45), 1);
+  transform: scaleY(var(--p));
+  transform-origin: 50% 100%;
+}
+
+/* 4. The performance curve drawing itself as the card comes up. */
+.mm-design .mm-draw {
+  --p: clamp(0, calc(var(--mm-p, 0) / .75), 1);
+  stroke-dasharray: var(--mm-len, 0);
+  stroke-dashoffset: calc(var(--mm-len, 0) * (1 - var(--p)));
+}
+
+/* 5. The four-word row unmasking line by line. clip-path clips the paint box
+      only, so there is no layout effect. */
+.mm-design .mm-line {
+  --p: clamp(0, calc((var(--mm-p, 0) - var(--mm-i, 0) * .12) / .5), 1);
+  clip-path: inset(0 0 calc((1 - var(--p)) * 100%) 0);
+  translate: 0 calc((1 - var(--p)) * .3em);
+}
+
+/* 6. Pinned caption depth — rides the carousel's own [data-on] state, so this
+      one keeps a transition. Opacity is untouched: the carousel keeps sole
+      control of visibility and a caption can never be stranded invisible. */
+.mm-design [data-mm-tip] {
+  translate: 0 14px;
+  transition: translate .6s cubic-bezier(.2, .75, .25, 1);
+}
+
+.mm-design [data-mm-tip][data-on] {
+  translate: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mm-design .mm-band,
+  .mm-design .mm-line {
+    opacity: 1;
+    translate: none;
+    clip-path: none;
+  }
+
+  .mm-design .mm-bars > * {
+    transform: none;
+  }
+
+  .mm-design .mm-draw {
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+  }
+
+  .mm-design .gh-grid,
+  .mm-design .gh-aurora,
+  .mm-design .gh-tags,
+  .mm-design [data-mm-tip] {
+    translate: none;
+  }
+}
