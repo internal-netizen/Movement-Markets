@@ -336,8 +336,12 @@
 .pg-back { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 600; color: var(--pg-muted); margin-bottom: 18px; }
 
 /* --- contact --- */
-.pg-contact-cards { display: grid; gap: 14px; }
+.pg-contact-cards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
 .pg-contact-card { display: flex; gap: 16px; padding: 22px; border-radius: 18px; background: var(--pg-surface); border: 1px solid var(--pg-line); }
+/* The support address is one unbreakable token; without this it sets a
+   min-content floor wider than a 320px phone and the card gets clipped. */
+.pg-contact-card > div { min-width: 0; }
+.pg-contact-card a { overflow-wrap: anywhere; }
 .pg-contact-card h3 { margin: 0 0 4px; font-size: 16px; }
 .pg-contact-card p { margin: 0; font-size: 14px; color: var(--pg-muted); line-height: 1.55; }
 .pg-contact-card a { font-weight: 700; }
@@ -366,7 +370,9 @@
 @media (max-width: 1024px) {
   .pg-stats, .pg-tiers { grid-template-columns: repeat(2, 1fr); }
   .pg-cards.cols-3, .pg-cards.cols-4, .pg-article-list, .pg-hub { grid-template-columns: repeat(2, 1fr); }
-  .pg-hero.has-aside .pg-hero-grid, .pg-split, .pg-split.is-narrow-left, .pg-faq-grid { grid-template-columns: 1fr; }
+  /* minmax(0,1fr) — a bare 1fr keeps a min-content floor, which lets a long
+     address or email push the single column wider than the phone viewport. */
+  .pg-hero.has-aside .pg-hero-grid, .pg-split, .pg-split.is-narrow-left, .pg-faq-grid { grid-template-columns: minmax(0, 1fr); }
   .pg-hero-aside { justify-self: stretch; max-width: none; }
 }
 @media (max-width: 720px) {
@@ -515,4 +521,24 @@
 @media (prefers-reduced-motion: reduce) {
   .js-motion .rv { opacity: 1; transform: none; transition: none; }
   .pg-board-table tr, .pg-hero::before { animation: none; }
+}
+
+/* --- phones --- */
+@media (max-width: 720px) {
+  .pg-table th, .pg-table td { white-space: normal; padding: 11px 12px; font-size: 13px; }
+  .pg-table .sub { font-size: 11.5px; }
+  .pg-panel { overflow: hidden; }
+  .pg-panel-head { flex-wrap: wrap; align-items: flex-start; }
+  .pg-segmented { flex-wrap: wrap; }
+  .pg-segmented button { padding: 7px 12px; font-size: 12.5px; }
+  .pg-range-scale span:nth-child(2), .pg-range-scale span:nth-child(3) { display: none; }
+  .pg-result-row strong { font-size: 19px; }
+  .pg-result-row.is-big strong { font-size: 26px; }
+  .pg-h1 { font-size: clamp(34px, 10vw, 44px); }
+  .pg-hero-copy { max-width: none; }
+  .pg-actions .pg-btn { width: 100%; justify-content: center; }
+  .pg-pills { gap: 6px; }
+  .pg-pill { min-height: 34px; padding: 0 12px; font-size: 12.5px; }
+  .pg-board-table .spark { display: none; }
+  .pg-image-card { aspect-ratio: 4 / 3; }
 }

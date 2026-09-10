@@ -362,11 +362,11 @@ export default function Band02({ theme = 'dark' }) {
         </div>
 
         {/* ── TOP 3 CARDS ── */}
-        <div style={S.topGrid}>
+        <div className="mb-grid3" style={S.topGrid}>
 
           {/* Card 1: Spreads with mini candlestick chart */}
-          <div style={S.card[theme]}>
-            <div style={S.chartArea}>
+          <div className="mb-card" style={S.card[theme]}>
+            <div className="mb-chart" style={S.chartArea}>
               <div style={S.chartWrap[theme]}>
                 <div style={S.chartLabel[theme]}>EUR/USD spreads</div>
                 <div style={S.chartInner}>
@@ -388,14 +388,14 @@ export default function Band02({ theme = 'dark' }) {
           </div>
 
           {/* Card 2: Execution with animated card */}
-          <div style={S.card[theme]}>
+          <div className="mb-card" style={S.card[theme]}>
             <ExecutionCard theme={theme} />
             <div style={S.cardTitle[theme]}>Execution you can time</div>
             <div style={S.cardDesc[theme]}>Around 12ms average fill across the major pairs during peak sessions.</div>
           </div>
 
           {/* Card 3: Growth / chart */}
-          <div style={S.card[theme]}>
+          <div className="mb-card" style={S.card[theme]}>
             <div style={{ height: '212px', boxSizing: 'border-box', position: 'relative', overflow: 'hidden', margin: '-32px -32px 0', padding: '32px', borderRadius: '26px 26px 0 0' }}>
               {/* vertical grid lines */}
               <div style={{ position: 'absolute', inset: 0, display: 'flex', justifyContent: 'space-between', padding: '0 44px' }}>
@@ -426,17 +426,17 @@ export default function Band02({ theme = 'dark' }) {
         </div>
 
         {/* ── BOTTOM 2 CARDS ── */}
-        <div style={S.botGrid}>
+        <div className="mb-grid2" style={S.botGrid}>
 
           {/* Wide card 1: Platforms */}
-          <div style={S.wideCard[theme]}>
-            <div style={S.wideCardText}>
-              <div style={S.wideTitle[theme]}>Platform<br />integration</div>
-              <div style={S.wideDesc[theme]}>Trade from MetaTrader 5 or Movement WebTrader — one account, both platforms, always in sync.</div>
+          <div className="mb-wide" style={S.wideCard[theme]}>
+            <div className="mb-wide-text" style={S.wideCardText}>
+              <div className="mb-wide-title" style={S.wideTitle[theme]}>Platform<br />integration</div>
+              <div className="mb-p" style={S.wideDesc[theme]}>Trade from MetaTrader 5 or Movement WebTrader — one account, both platforms, always in sync.</div>
             </div>
-            <div style={S.platformGrid}>
+            <div className="mb-tiles" style={S.platformGrid}>
               {PLATFORM_ITEMS.map(({ label, Icon: Ic }) => (
-                <div key={label} style={S.platformItem[theme]}>
+                <div key={label} className="mb-tile" style={S.platformItem[theme]}>
                   <Ic />
                   <span style={S.platformLabel}>{label}</span>
                 </div>
@@ -445,12 +445,12 @@ export default function Band02({ theme = 'dark' }) {
           </div>
 
           {/* Wide card 2: Support */}
-          <div style={S.wideCard[theme]}>
-            <div style={S.wideCardText}>
-              <div style={S.wideTitle[theme]}>Support in<br />real-time</div>
-              <div style={S.wideDesc[theme]}>A named dealer — reachable 24/7. Not a bot. Not a queue.</div>
+          <div className="mb-wide" style={S.wideCard[theme]}>
+            <div className="mb-wide-text" style={S.wideCardText}>
+              <div className="mb-wide-title" style={S.wideTitle[theme]}>Support in<br />real-time</div>
+              <div className="mb-p" style={S.wideDesc[theme]}>A named dealer — reachable 24/7. Not a bot. Not a queue.</div>
             </div>
-            <div style={S.dealerIconWrap}>
+            <div className="mb-dealer" style={S.dealerIconWrap}>
               <div style={S.dealerIcon[theme]}>
                 <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>

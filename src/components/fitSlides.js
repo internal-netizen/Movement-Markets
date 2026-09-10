@@ -24,9 +24,18 @@ export function fitSlides(root) {
     .filter((frame) => !frame.closest('[data-mm-pin]'));
 
   const apply = () => {
+    // On a phone the canvases lay out as ordinary flowing content (see the
+    // .mb-* rules in movement-home.css) instead of being scaled down to a
+    // thumbnail, so there is nothing to fit.
+    const phone = window.innerWidth <= 720;
     frames.forEach((frame) => {
       const canvas = frame.firstElementChild;
       if (!canvas) return;
+      if (phone) {
+        frame.style.removeProperty('--mm-slide-fit');
+        frame.style.removeProperty('height');
+        return;
+      }
       const natural = canvas.offsetWidth || ART_W; // layout width, ignores transform
       const fit = frame.clientWidth / natural;
       frame.style.setProperty('--mm-slide-fit', String(fit));

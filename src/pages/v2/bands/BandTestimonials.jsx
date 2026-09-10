@@ -127,7 +127,7 @@ export default function BandTestimonials({ theme = 'dark' }) {
             </div>
           ))}
         </div>
-        <div style={S.grid}>
+        <div className="mb-grid" style={S.grid}>
           {REVIEWS.map((r) => (
             <div key={r.id} style={S.card[theme]}>
               <div style={S.stars}>

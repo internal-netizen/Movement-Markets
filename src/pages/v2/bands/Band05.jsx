@@ -243,18 +243,18 @@ export default function Band05({ theme = 'dark' }) {
     <div data-dc-tpl="360" style={S.s0}>
       <div data-dc-tpl="361" style={S.s1}>
         <div data-dc-tpl="363" data-screen-label="03" data-fit="1200" style={S.s2}>
-          <div data-dc-tpl="364" style={S.s3}>
-            <div data-dc-tpl="377" style={S.s4}>
-              <div data-dc-tpl="378" style={S.s5[theme]}>
+          <div className="mb-canvas" data-dc-tpl="364" style={S.s3}>
+            <div className="mb-row" data-dc-tpl="377" style={S.s4}>
+              <div className="mb-media" data-dc-tpl="378" style={S.s5[theme]}>
                 <div data-dc-tpl="379" style={S.s6[theme]} />
               </div>
               <div data-dc-tpl="381" style={S.s8}>
-                <div data-dc-tpl="382" style={S.s9}>
+                <div className="mb-cards" data-dc-tpl="382" style={S.s9}>
                   <div data-dc-tpl="383" style={{...S.s10[theme], position: 'relative', overflow: 'hidden'}}>
                     <div style={{ position: 'relative', zIndex: 2 }}>
-                      <div data-dc-tpl="384" style={S.s11[theme]}>Availability target</div>
-                      <div data-dc-tpl="385" style={S.s12[theme]}>99.9%</div>
-                      <div data-dc-tpl="386" style={S.s13[theme]}>Uptime target across pricing, routing and platform access.</div>
+                      <div className="mb-sub" data-dc-tpl="384" style={S.s11[theme]}>Availability target</div>
+                      <div className="mb-big" data-dc-tpl="385" style={S.s12[theme]}>99.9%</div>
+                      <div className="mb-p" data-dc-tpl="386" style={S.s13[theme]}>Uptime target across pricing, routing and platform access.</div>
                     </div>
                     {/* Background Graphic 1 */}
                     <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style={{position: 'absolute', bottom: '-40px', right: '-40px', width: '250px', height: '250px', opacity: 0.05, zIndex: 1}}>
@@ -265,12 +265,12 @@ export default function Band05({ theme = 'dark' }) {
                   </div>
                   <div data-dc-tpl="387" style={{...S.s14, position: 'relative', overflow: 'hidden'}}>
                     <div style={{ position: 'relative', zIndex: 2 }}>
-                      <div data-dc-tpl="388" style={S.s15[theme]}>
+                      <div className="mb-sub" data-dc-tpl="388" style={S.s15[theme]}>
                         Execution target
                         <br data-dc-tpl="389" />
                         under 15ms
                       </div>
-                      <div data-dc-tpl="390" style={S.s16}>Median fill time on the major pairs in liquid sessions.</div>
+                      <div className="mb-p" data-dc-tpl="390" style={S.s16}>Median fill time on the major pairs in liquid sessions.</div>
                     </div>
                     {/* Background Graphic 2 */}
                     <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style={{position: 'absolute', top: '0', right: '-20px', width: '220px', height: '220px', opacity: 0.15, zIndex: 1}}>
@@ -278,7 +278,7 @@ export default function Band05({ theme = 'dark' }) {
                     </svg>
                   </div>
                 </div>
-                <div data-dc-tpl="391" style={S.s17[theme]}>
+                <div className="mb-h" data-dc-tpl="391" style={S.s17[theme]}>
                   Performance
                   <br data-dc-tpl="392" />
                   built into every click.

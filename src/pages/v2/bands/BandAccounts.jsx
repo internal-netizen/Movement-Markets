@@ -142,7 +142,7 @@ export default function BandAccounts({ theme = 'dark' }) {
         <p style={S.sub[theme]}>
           From first trade to institutional scale — every account on the same infrastructure, different terms.
         </p>
-        <div style={S.grid}>
+        <div className="mb-grid" style={S.grid}>
           {ACCOUNTS.map((acc) => {
             const isPro = acc.name === 'Raw';
             const cardStyle = isPro ? S.card[`pro_${theme}`] : S.card[theme];

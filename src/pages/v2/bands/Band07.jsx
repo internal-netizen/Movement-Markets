@@ -340,58 +340,58 @@ export default function Band07({ theme = 'dark' }) {
     <div data-dc-tpl="434" style={S.s0}>
       <div data-dc-tpl="435" style={S.s1}>
         <div data-dc-tpl="437" data-screen-label="05" data-fit="1200" style={S.s2}>
-          <div data-dc-tpl="438" style={S.s3}>
-            <div data-dc-tpl="451" style={S.s4}>
-              <div data-dc-tpl="452" style={S.s5}>
-                <div data-dc-tpl="453" style={S.s6[theme]}>
+          <div className="mb-canvas" data-dc-tpl="438" style={S.s3}>
+            <div className="mb-row" data-dc-tpl="451" style={S.s4}>
+              <div className="mb-copy" data-dc-tpl="452" style={S.s5}>
+                <div className="mb-h" data-dc-tpl="453" style={S.s6[theme]}>
                   Global
                   <br data-dc-tpl="454" />
                   access.
                 </div>
-                <div data-dc-tpl="455" style={S.s7[theme]}>
+                <div className="mb-sub" data-dc-tpl="455" style={S.s7[theme]}>
                   One account, every
                   <br data-dc-tpl="456" />
                   market you trade.
                 </div>
-                <div data-dc-tpl="457" style={S.s8[theme]}>Move across the world’s most actively traded markets without leaving your Movement Markets account. Product availability varies by jurisdiction and account type.</div>
+                <div className="mb-p" data-dc-tpl="457" style={S.s8[theme]}>Move across the world’s most actively traded markets without leaving your Movement Markets account. Product availability varies by jurisdiction and account type.</div>
               </div>
               <div data-dc-tpl="458" style={S.s9}>
-                <div data-dc-tpl="459" style={S.s10[theme]}>
+                <div className="mb-media mb-strip" data-dc-tpl="459" style={S.s10[theme]}>
                   <div data-dc-tpl="460" style={S.s11[theme]} />
                 </div>
                 <div data-dc-tpl="464" style={S.s14}>
-                  <div data-dc-tpl="465" style={S.s15}>
+                  <div className="mb-listrow" data-dc-tpl="465" style={S.s15}>
                     <div data-dc-tpl="466" style={S.s16}>
                       <div data-dc-tpl="467" style={S.s17[theme]}>Forex</div>
-                      <div data-dc-tpl="468" style={S.s18}>
+                      <div className="mb-p" data-dc-tpl="468" style={S.s18}>
                         Access to major, minor
                         <br data-dc-tpl="469" />
                         and exotic currency pairs.
                       </div>
                     </div>
-                    <div data-dc-tpl="470" style={S.s19[theme]}>60+ pairs</div>
+                    <div className="mb-num" data-dc-tpl="470" style={S.s19[theme]}>60+ pairs</div>
                   </div>
-                  <div data-dc-tpl="471" style={S.s20[theme]}>
+                  <div className="mb-listrow" data-dc-tpl="471" style={S.s20[theme]}>
                     <div data-dc-tpl="472" style={S.s16}>
                       <div data-dc-tpl="473" style={S.s21[theme]}>Indices & commodities</div>
-                      <div data-dc-tpl="474" style={S.s22[theme]}>
+                      <div className="mb-p" data-dc-tpl="474" style={S.s22[theme]}>
                         Global benchmarks, energy
                         <br data-dc-tpl="475" />
                         and precious metals.
                       </div>
                     </div>
-                    <div data-dc-tpl="476" style={S.s23[theme]}>30+ markets</div>
+                    <div className="mb-num" data-dc-tpl="476" style={S.s23[theme]}>30+ markets</div>
                   </div>
-                  <div data-dc-tpl="477" style={S.s24[theme]}>
+                  <div className="mb-listrow" data-dc-tpl="477" style={S.s24[theme]}>
                     <div data-dc-tpl="478" style={S.s16}>
                       <div data-dc-tpl="479" style={S.s25[theme]}>Shares & crypto CFDs</div>
-                      <div data-dc-tpl="480" style={S.s26[theme]}>
+                      <div className="mb-p" data-dc-tpl="480" style={S.s26[theme]}>
                         Company shares and major
                         <br data-dc-tpl="481" />
                         digital assets as CFDs.
                       </div>
                     </div>
-                    <div data-dc-tpl="482" style={S.s27[theme]}>100+ instruments</div>
+                    <div className="mb-num" data-dc-tpl="482" style={S.s27[theme]}>100+ instruments</div>
                   </div>
                 </div>
               </div>

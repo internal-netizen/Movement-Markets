@@ -107,7 +107,7 @@ export default function BandFunding({ theme = 'dark' }) {
         <p style={S.sub[theme]}>
           No deposit fees. Multiple methods. Your money moves when you need it to.
         </p>
-        <div style={S.methodsGrid}>
+        <div className="mb-grid" style={S.methodsGrid}>
           {METHODS.map((m) => (
             <div key={m.name} style={S.methodCard[theme]}>
               <div style={S.methodIconBox[theme]}>{m.icon}</div>
@@ -119,7 +119,7 @@ export default function BandFunding({ theme = 'dark' }) {
             </div>
           ))}
         </div>
-        <div style={S.featuresGrid}>
+        <div className="mb-grid" style={S.featuresGrid}>
           {FEATURES.map((f) => (
             <div key={f.title} style={S.featureCard[theme]}>
               <div style={S.featureIcon[theme]}>{f.icon}</div>

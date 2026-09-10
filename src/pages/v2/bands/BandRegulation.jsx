@@ -130,7 +130,7 @@ export default function BandRegulation({ theme = 'dark' }) {
           Movement Markets operates under oversight from multiple tier-1 financial regulators,
           <br />ensuring your account is held to the highest industry standards.
         </p>
-        <div style={S.grid}>
+        <div className="mb-grid" style={S.grid}>
           {REGULATORS.map((r) => (
             <div key={r.code} style={S.card[theme]}>
               <div style={S.badge[theme]}>

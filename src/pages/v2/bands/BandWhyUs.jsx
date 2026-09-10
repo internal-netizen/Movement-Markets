@@ -114,7 +114,7 @@ export default function BandWhyUs({ theme = 'dark' }) {
             </a>
           </div>
         </div>
-        <div style={S.grid}>
+        <div className="mb-grid" style={S.grid}>
           {PILLARS.map((p) => (
             <div key={p.number} style={p.accent ? S.pillarAccent[theme] : S.pillar[theme]}>
               <div style={p.accent ? S.pillarNum[`accent_${theme}`] : S.pillarNum[theme]}>{p.number}</div>

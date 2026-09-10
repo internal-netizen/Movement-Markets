@@ -100,7 +100,7 @@ export default function BandPlatformDeep({ theme = 'dark' }) {
         <p style={S.sub[theme]}>
           Two terminals and the mobile apps, all connected to the same raw pricing and liquidity.
         </p>
-        <div style={S.grid}>
+        <div className="mb-grid" style={S.grid}>
           {PLATFORMS.map((p) => (
             <div key={p.id} style={S.card[theme]}>
               <div style={S.cardBadge[theme]}>{p.badge}</div>

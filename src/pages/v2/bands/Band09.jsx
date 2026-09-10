@@ -181,32 +181,32 @@ export default function Band09({ theme = 'dark' }) {
     <div data-dc-tpl="510" style={S.s0}>
       <div data-dc-tpl="511" style={S.s1}>
         <div data-dc-tpl="513" data-screen-label="07" data-fit="1200" style={S.s2}>
-          <div data-dc-tpl="514" style={S.s3}>
-            <div data-dc-tpl="527" style={S.s4}>
-              <div data-dc-tpl="528" style={S.s5}>
-                <div data-dc-tpl="529" style={S.s6}>
-                  <div data-dc-tpl="530" style={S.s7[theme]}>
+          <div className="mb-canvas" data-dc-tpl="514" style={S.s3}>
+            <div className="mb-row" data-dc-tpl="527" style={S.s4}>
+              <div className="mb-copy" data-dc-tpl="528" style={S.s5}>
+                <div className="mb-pair" data-dc-tpl="529" style={S.s6}>
+                  <div className="mb-label" data-dc-tpl="530" style={S.s7[theme]}>
                     Clear risk
                     <br data-dc-tpl="531" />
                     information
                   </div>
-                  <div data-dc-tpl="532" style={S.s8[theme]}>Understand leverage, margin requirements and product risk before trading.</div>
+                  <div className="mb-p" data-dc-tpl="532" style={S.s8[theme]}>Understand leverage, margin requirements and product risk before trading.</div>
                 </div>
-                <div data-dc-tpl="533" style={S.s9}>
-                  <div data-dc-tpl="534" style={S.s7[theme]}>
+                <div className="mb-pair" data-dc-tpl="533" style={S.s9}>
+                  <div className="mb-label" data-dc-tpl="534" style={S.s7[theme]}>
                     Account
                     <br data-dc-tpl="535" />
                     safeguards
                   </div>
-                  <div data-dc-tpl="536" style={S.s8[theme]}>Secure access, verification and risk controls support a more informed trading experience.</div>
+                  <div className="mb-p" data-dc-tpl="536" style={S.s8[theme]}>Secure access, verification and risk controls support a more informed trading experience.</div>
                 </div>
-                <div data-dc-tpl="537" style={S.s10[theme]}>
+                <div className="mb-h" data-dc-tpl="537" style={S.s10[theme]}>
                   Move with
                   <br data-dc-tpl="538" />
                   more awareness.
                 </div>
               </div>
-              <div data-dc-tpl="539" style={S.s11[theme]}>
+              <div className="mb-media" data-dc-tpl="539" style={S.s11[theme]}>
                 <div data-dc-tpl="540" style={S.s12[theme]} />
               </div>
             </div>

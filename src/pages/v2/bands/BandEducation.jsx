@@ -104,7 +104,7 @@ export default function BandEducation({ theme = 'dark' }) {
             View all guides {ARROW_ICON}
           </a>
         </div>
-        <div style={S.grid}>
+        <div className="mb-grid" style={S.grid}>
           {RESOURCES.map((r) => (
             <a key={r.href} href={r.href} style={S.card[theme]}>
               <span style={S.tag[theme]}>{r.tag}</span>

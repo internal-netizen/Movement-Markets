@@ -281,34 +281,34 @@ export default function Band06({ theme = 'dark' }) {
     <div data-dc-tpl="393" style={S.s0}>
       <div data-dc-tpl="394" style={S.s1}>
         <div data-dc-tpl="396" data-screen-label="04" data-fit="1200" style={S.s2}>
-          <div data-dc-tpl="397" style={S.s3}>
-            <div data-dc-tpl="410" style={S.s4}>
+          <div className="mb-canvas" data-dc-tpl="397" style={S.s3}>
+            <div className="mb-head" data-dc-tpl="410" style={S.s4}>
               <div data-dc-tpl="411" style={S.s5[theme]}>
                 <div data-dc-tpl="412" style={S.s6}>
                   <div data-dc-tpl="413" style={S.s7[theme]} />
                 </div>
                 <div data-dc-tpl="414" style={S.s8[theme]}>Our technology</div>
               </div>
-              <div data-dc-tpl="415" style={S.s9}>
-                <div data-dc-tpl="416" style={S.s10[theme]}>Purpose-built systems connect pricing, platforms and execution in one coordinated trading environment.</div>
-                <div data-dc-tpl="417" style={S.s10[theme]}>Pricing, routing and platform access are built to work as one system.</div>
+              <div className="mb-copy" data-dc-tpl="415" style={S.s9}>
+                <div className="mb-p" data-dc-tpl="416" style={S.s10[theme]}>Purpose-built systems connect pricing, platforms and execution in one coordinated trading environment.</div>
+                <div className="mb-p" data-dc-tpl="417" style={S.s10[theme]}>Pricing, routing and platform access are built to work as one system.</div>
               </div>
-              <div data-dc-tpl="418" style={S.s11[theme]}>
+              <div className="mb-h" data-dc-tpl="418" style={S.s11[theme]}>
                 Technology
                 <br data-dc-tpl="419" />
                 & execution.
               </div>
             </div>
-            <div data-dc-tpl="420" style={S.s12[theme]}>
+            <div className="mb-row" data-dc-tpl="420" style={S.s12[theme]}>
               <div data-dc-tpl="421" style={{...S.s13, position: 'relative', overflow: 'hidden'}}>
                 <div data-dc-tpl="422" style={S.s14}>01</div>
                 <div data-dc-tpl="423" style={{...S.s15, position: 'relative', zIndex: 2}}>
-                  <div data-dc-tpl="424" style={S.s16[theme]}>
+                  <div className="mb-sub" data-dc-tpl="424" style={S.s16[theme]}>
                     Smart liquidity
                     <br data-dc-tpl="425" />
                     routing
                   </div>
-                  <div data-dc-tpl="426" style={S.s17}>Orders are directed through connected liquidity pathways to support efficient execution.</div>
+                  <div className="mb-p" data-dc-tpl="426" style={S.s17}>Orders are directed through connected liquidity pathways to support efficient execution.</div>
                 </div>
                 {/* Tech Graphic 1 */}
                 <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style={{position: 'absolute', bottom: '-40px', right: '-20px', width: '200px', height: '200px', opacity: 0.15, zIndex: 1}}>
@@ -324,12 +324,12 @@ export default function Band06({ theme = 'dark' }) {
               <div data-dc-tpl="427" style={{...S.s18[theme], position: 'relative', overflow: 'hidden'}}>
                 <div data-dc-tpl="428" style={S.s19[theme]}>02</div>
                 <div data-dc-tpl="429" style={{...S.s15, position: 'relative', zIndex: 2}}>
-                  <div data-dc-tpl="430" style={S.s20[theme]}>
+                  <div className="mb-sub" data-dc-tpl="430" style={S.s20[theme]}>
                     Connected platforms
                     <br data-dc-tpl="431" />
                     on your devices
                   </div>
-                  <div data-dc-tpl="432" style={S.s21[theme]}>Keep your account, watchlists and trading access consistent across supported devices.</div>
+                  <div className="mb-p" data-dc-tpl="432" style={S.s21[theme]}>Keep your account, watchlists and trading access consistent across supported devices.</div>
                 </div>
                 {/* Tech Graphic 2 */}
                 <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style={{position: 'absolute', bottom: '-20px', right: '-10px', width: '180px', height: '180px', opacity: 0.12, zIndex: 1}}>
@@ -338,7 +338,7 @@ export default function Band06({ theme = 'dark' }) {
                   <rect x="120" y="80" width="50" height="90" rx="6" fill="#262626" stroke="#ffffff" strokeWidth="3" />
                 </svg>
               </div>
-              <div data-dc-tpl="433" style={S.s22[theme]} />
+              <div className="mb-media" data-dc-tpl="433" style={S.s22[theme]} />
             </div>
           </div>
         </div>

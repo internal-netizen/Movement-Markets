@@ -1334,3 +1334,78 @@
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35) !important;
 }
 
+
+/* ---------------------------------------------------------------------------
+   Phones: the canvas bands stop being scaled artboards and flow.
+
+   Each band's key elements carry an .mb-* class; below 720px the 1200px
+   canvas becomes full width with no transform, rows become columns, fixed
+   widths relax, and the artboard's tiny 7-9px body copy is set at a readable
+   size. !important is needed because the artboard sizes are inline styles.
+   --------------------------------------------------------------------------- */
+@media (max-width: 720px) {
+  .mm-design { overflow-x: clip; }
+
+  /* --- canvas bands flow instead of scaling --- */
+  .mm-design [data-fit="1200"] { height: auto !important; max-width: none !important; overflow: visible !important; }
+  .mm-design [data-fit="1200"] > .mb-canvas { transform: none !important; width: 100% !important; height: auto !important; padding: 18px 14px !important; }
+  .mm-design .mb-row, .mm-design .mb-head, .mm-design .mb-cards, .mm-design .mb-pair { flex-direction: column !important; align-items: stretch !important; gap: 14px !important; height: auto !important; }
+  .mm-design .mb-copy { width: auto !important; max-width: none !important; flex: none !important; }
+  .mm-design .mb-h { font-size: 32px !important; line-height: 1.08 !important; text-align: left !important; }
+  .mm-design .mb-sub { font-size: 18px !important; line-height: 1.3 !important; }
+  .mm-design .mb-big { font-size: 56px !important; }
+  .mm-design .mb-num { font-size: 22px !important; white-space: nowrap; flex: none; margin-left: 12px; }
+  .mm-design [data-band="markets"] .mb-num { font-size: 20px !important; margin-left: 8px; }
+  .mm-design .mb-p { font-size: 14px !important; line-height: 1.6 !important; max-width: none !important; }
+  .mm-design .mb-label { width: auto !important; }
+  .mm-design .mb-cards > * { height: auto !important; min-height: 0 !important; }
+  .mm-design [style*="padding: 96px 40px"] { padding-top: 56px !important; }
+
+  /* Images keep their own proportions rather than a blanket 4:3 crop. */
+  .mm-design .mb-media { width: 100% !important; flex: none !important; height: auto !important; }
+  .mm-design .mb-media > * { aspect-ratio: 4 / 3 !important; }
+  .mm-design [data-band="metrics"] .mb-media > *,
+  .mm-design [data-band="responsibility"] .mb-media > * { aspect-ratio: 1 / 1 !important; }
+  .mm-design [data-band="markets"] .mb-strip > * { aspect-ratio: 2047 / 372 !important; }
+
+  /* Card grids built on repeat(auto-fill/auto-fit, minmax(300-400px, 1fr)):
+     when the phone is narrower than that minimum the track keeps its floor
+     and the cards get clipped, so pin them to one shrinkable column. */
+  .mm-design .mb-grid, .mm-design .mb-grid2, .mm-design .mb-grid3 { grid-template-columns: minmax(0, 1fr) !important; }
+
+  /* --- "What you'll get": the two wide cards stack --- */
+  .mm-design .mb-card { padding: 24px !important; }
+  .mm-design .mb-chart { height: auto !important; }
+  .mm-design .mb-wide { flex-direction: column !important; align-items: stretch !important; gap: 22px !important; padding: 24px !important; }
+  .mm-design .mb-wide-text { width: 100% !important; flex: none !important; }
+  .mm-design .mb-wide-title { font-size: 26px !important; }
+  .mm-design .mb-tiles { width: 100% !important; grid-template-columns: repeat(3, 1fr) !important; place-content: stretch !important; gap: 10px !important; }
+  .mm-design .mb-tile { width: 100% !important; }
+  .mm-design .mb-dealer { width: 100% !important; }
+
+  /* Market rows put the figure under the copy rather than beside it. */
+  .mm-design .mb-listrow { flex-direction: column !important; align-items: flex-start !important; gap: 6px !important; }
+  .mm-design .mb-listrow .mb-num { margin-left: 0 !important; }
+
+  /* --- indicative spreads: drop the category column, tighten the cells --- */
+  .mm-design .mb-sub-left { text-align: left !important; max-width: none !important; }
+  .mm-design .mb-table { table-layout: fixed; width: 100% !important; }
+  .mm-design .mb-hide-sm { display: none !important; }
+  .mm-design .mb-table th, .mm-design .mb-table td { padding: 12px 10px !important; font-size: 12.5px !important; }
+
+  /* --- hero --- */
+  .mm-design .mh-stage { min-height: 0 !important; padding-top: 86px; }
+  .mm-design .mh-bg { overflow: hidden; }
+  .mm-design .mh-glow { display: none; }
+  .mm-design .mh-art { width: 100%; height: 232px; object-fit: cover; object-position: 60% 45%; margin: 0;
+    -webkit-mask-image: linear-gradient(#000 74%, transparent); mask-image: linear-gradient(#000 74%, transparent); }
+  .mm-design .mh-inner { padding: 22px 0 26px !important; }
+  .mm-design .mh-visual { margin-top: 20px !important; }
+  .mm-design .mh-strip { padding: 20px 0 28px; }
+
+  .mm-design [data-band="cta"] { overflow: hidden; }
+  .mm-design .legal-layout-grid { grid-template-columns: 1fr !important; }
+  .mm-design .legal-layout-grid > * { min-width: 0; max-width: 100%; }
+  .mm-design .legal-layout-grid table { display: block; max-width: 100%; overflow-x: auto; }
+  .mm-design .legal-layout-grid h1, .mm-design .legal-layout-grid h2 { overflow-wrap: anywhere; }
+}

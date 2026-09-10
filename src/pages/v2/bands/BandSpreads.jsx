@@ -96,15 +96,15 @@ export default function BandSpreads({ theme = 'dark' }) {
             </div>
             <h2 style={S.headline[theme]}>Tight pricing,<br />across every market</h2>
           </div>
-          <p style={S.sub[theme]}>
+          <p className="mb-sub-left" style={S.sub[theme]}>
             Raw interbank feeds, routed through our liquidity network. No markup on Raw accounts.
           </p>
         </div>
-        <table style={S.table[theme]}>
+        <table className="mb-table" style={S.table[theme]}>
           <thead>
             <tr>
               <th style={S.th[theme]}>Instrument</th>
-              <th style={S.th[theme]}>Category</th>
+              <th className="mb-hide-sm" style={S.th[theme]}>Category</th>
               <th style={S.thRight[theme]}>Typical spread (pips)</th>
               <th style={S.thRight[theme]}>Min spread</th>
             </tr>
@@ -120,7 +120,7 @@ export default function BandSpreads({ theme = 'dark' }) {
                     </div>
                   </div>
                 </td>
-                <td style={S.td[theme]}>
+                <td className="mb-hide-sm" style={S.td[theme]}>
                   <span style={S.categoryPill[theme]}>{inst.category}</span>
                 </td>
                 <td style={S.tdRight[theme]}>
