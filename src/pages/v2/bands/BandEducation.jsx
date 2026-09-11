@@ -18,7 +18,7 @@ const RESOURCES = [
   },
   {
     tag: 'Platforms',
-    title: 'MetaTrader 5 vs WebTrader: which is right for you?',
+    title: 'Xpert Trader vs WebTrader: which is right for you?',
     desc: 'Side-by-side comparison of both platforms across execution, charting and automation.',
     readTime: '6 min read',
     href: '/platforms',

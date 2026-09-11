@@ -58,8 +58,8 @@ export default function SiteFooter() {
 
         <div className="footer-links">
           <h3>Platforms & Tools</h3>
-          <Link to="/platforms/metatrader-5">MetaTrader 5</Link>
-          <Link to="/platforms/webtrader">Movement WebTrader</Link>
+          <Link to="/platforms/xpert-trader">Xpert Trader</Link>
+          <Link to="/platforms/webtrader">WebTrader</Link>
           <Link to="/tools/economic-calendar">Economic Calendar</Link>
           <Link to="/tools/market-hours">Market Hours</Link>
           <Link to="/tools/calculators">Trading Calculators</Link>

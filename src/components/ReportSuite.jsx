@@ -74,7 +74,7 @@ export default function ReportSuite() {
           <a href="#platforms">
             <small>02 · Platforms</small>
             <strong>Trading Technology</strong>
-            <span>MT5 and cTrader across desktop and mobile.</span>
+            <span>XT and cTrader across desktop and mobile.</span>
           </a>
           <a href="#pricing" className="toc-lime">
             <small>03 · Pricing</small>

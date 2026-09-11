@@ -213,11 +213,10 @@ function ExecutionCard({ theme }) {
 
 /* ─── Platform grid card ─────────────────────────────────────────────────── */
 const PLATFORM_ITEMS = [
-  { label: 'MT5',       Icon: Icon.MT5 },
+  { label: 'XT',        Icon: Icon.MT5 },
   { label: 'WebTrader', Icon: Icon.cTrader },
   { label: 'Mobile',    Icon: Icon.Mobile },
   { label: 'API / FIX', Icon: Icon.API },
-  { label: 'Web',       Icon: Icon.Globe },
   { label: 'Custom',    Icon: Icon.Scale },
 ];
 
@@ -226,7 +225,6 @@ const FEATURE_PILLS = [
   { label: 'Raw spreads',         Icon: Icon.Spread },
   { label: 'Segregated funds',    Icon: Icon.Shield },
   { label: 'Named dealers',       Icon: Icon.Support },
-  { label: 'Rollover clarity',    Icon: Icon.Coins },
   { label: 'Multi-platform',      Icon: Icon.MT5 },
   { label: 'Multilingual support',Icon: Icon.Globe },
   { label: 'Asset library 100+',  Icon: Icon.Scale },
@@ -432,7 +430,7 @@ export default function Band02({ theme = 'dark' }) {
           <div className="mb-wide" style={S.wideCard[theme]}>
             <div className="mb-wide-text" style={S.wideCardText}>
               <div className="mb-wide-title" style={S.wideTitle[theme]}>Platform<br />integration</div>
-              <div className="mb-p" style={S.wideDesc[theme]}>Trade from MetaTrader 5 or Movement WebTrader — one account, both platforms, always in sync.</div>
+              <div className="mb-p" style={S.wideDesc[theme]}>Trade from Xpert Trader or WebTrader — one account, both platforms, always in sync.</div>
             </div>
             <div className="mb-tiles" style={S.platformGrid}>
               {PLATFORM_ITEMS.map(({ label, Icon: Ic }) => (

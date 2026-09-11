@@ -51,7 +51,7 @@ const BANDS = {
   regulation: BandRegulation,   // tier-1 regulator badge strip
   accounts: BandAccounts,       // account type comparison cards
   spreads: BandSpreads,         // indicative spreads table
-  platformDeep: BandPlatformDeep, // MT5 / cTrader / Mobile deep-dive
+  platformDeep: BandPlatformDeep, // XT / cTrader / Mobile deep-dive
   testimonials: BandTestimonials, // social proof + stats
   funding: BandFunding,         // deposit & withdrawal methods
   whyUs: BandWhyUs,             // differentiator pillars

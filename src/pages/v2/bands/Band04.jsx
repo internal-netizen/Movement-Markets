@@ -330,7 +330,7 @@ export default function Band04({ theme = 'dark' }) {
                   <div data-dc-tpl="331" style={S.s7[theme]}>
                     <div data-dc-tpl="332" style={S.s8[theme]}>02 · Platforms</div>
                     <div data-dc-tpl="333" style={S.s9[theme]}>Trading Technology</div>
-                    <div data-dc-tpl="334" style={S.s10[theme]}>MetaTrader 5 and Movement WebTrader across desktop, web and mobile.</div>
+                    <div data-dc-tpl="334" style={S.s10[theme]}>Xpert Trader and WebTrader across desktop, web and mobile.</div>
                   </div>
                   <div data-dc-tpl="335" style={S.s11}>
                     <div data-dc-tpl="336" style={S.s12}>03 · Pricing</div>

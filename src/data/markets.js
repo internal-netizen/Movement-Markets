@@ -29,12 +29,12 @@ export const MARKETS = [
       { title: 'Depth where it counts', text: 'Pricing is aggregated from multiple liquidity providers, so the top of book holds up through data releases and session opens rather than widening the moment volume arrives.' },
       { title: 'Majors, minors and exotics', text: 'Trade the seven majors, the crosses that move on their own fundamentals, and a curated set of exotics for diversification, all from one account.' },
       { title: 'Costs you can see', text: 'Raw accounts show the spread and the commission separately. Standard accounts roll the cost into the spread with no commission. Neither hides a markup.' },
-      { title: 'Hedge, scale and automate', text: 'Full hedging, micro lots from 0.01 and unrestricted use of Expert Advisors on MetaTrader 5. Scalping and news trading are allowed.' },
+      { title: 'Hedge, scale and automate', text: 'Full hedging, micro lots from 0.01 and unrestricted use of automated strategies on Xpert Trader. Scalping and news trading are allowed.' },
     ],
     faq: [
       { q: 'When is the forex market open?', a: 'Forex trades continuously from the Sydney open on Monday morning to the New York close on Friday evening. Our market hours tool shows each session in your local time and whether it is open right now.' },
       { q: 'What does a 0.0 pip spread actually mean?', a: 'On a Raw account the bid and ask can be identical for the most liquid pairs during active sessions. You pay a fixed commission per lot instead, so the total cost is transparent and usually lower than an all-in spread.' },
-      { q: 'Do you allow scalping and Expert Advisors?', a: 'Yes. There are no restrictions on trading style, holding time or automation. Expert Advisors run natively on MetaTrader 5.' },
+      { q: 'Do you allow scalping and automated strategies?', a: 'Yes. There are no restrictions on trading style, holding time or automation. Automated strategies run natively on Xpert Trader.' },
       { q: 'Is there negative balance protection?', a: 'Yes. Retail clients cannot lose more than the balance of their account. If a gap leaves an account negative, it is reset to zero.' },
     ],
   },
@@ -130,7 +130,7 @@ export const MARKETS = [
       { title: 'Real exchange prices', text: 'Share CFDs are priced directly from the exchange order book, so the spread you see is the market spread with a small commission on top.' },
       { title: 'Long or short', text: 'Take a view in either direction. Short a name into earnings or hedge a portfolio without borrowing stock.' },
       { title: 'Dividends adjusted', text: 'Long positions receive a dividend adjustment on the ex-date; short positions pay it. Nothing is silently lost.' },
-      { title: 'One account for everything', text: 'Shares sit alongside FX, indices and metals on the same MetaTrader 5 login, with one margin pool.' },
+      { title: 'One account for everything', text: 'Shares sit alongside FX, indices and metals on the same Xpert Trader login, with one margin pool.' },
     ],
     faq: [
       { q: 'When can I trade share CFDs?', a: 'During the underlying exchange’s regular session. US shares trade 09:30 to 16:00 New York time, London shares 08:00 to 16:30 London time.' },
@@ -162,7 +162,7 @@ export const MARKETS = [
       { title: 'Short as easily as long', text: 'Crypto CFDs let you trade both directions without borrowing coins. Sell a rally, buy a dip, or hedge holdings you keep elsewhere.' },
       { title: 'No custody risk', text: 'You never hold coins, so there are no wallets, keys or exchange withdrawals to worry about. Funds stay in your segregated trading account.' },
       { title: 'Weekend markets', text: 'Crypto trades 24 hours a day, seven days a week, including the weekend gaps that other markets cannot react to.' },
-      { title: 'Same platform, same margin', text: 'Trade crypto from the MetaTrader 5 or WebTrader account you already use, alongside FX and indices.' },
+      { title: 'Same platform, same margin', text: 'Trade crypto from the Xpert Trader or WebTrader account you already use, alongside FX and indices.' },
     ],
     faq: [
       { q: 'Can I trade crypto at the weekend?', a: 'Yes. Crypto CFDs are available 24/7 with a short maintenance window each week.' },

@@ -36,7 +36,7 @@ export default function Funding() {
           <div className="account-select">
             <span>
               <small>Trading account</small>
-              <b>MT5 · 4281</b>
+              <b>XT · 4281</b>
             </span>
             <span>Standard</span>
           </div>

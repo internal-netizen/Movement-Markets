@@ -49,7 +49,6 @@ const REVIEWS = [
 const STATS = [
   { value: '32K+', label: 'Active traders' },
   { value: '40+',  label: 'Countries served' },
-  { value: '4.8',  label: 'Trustpilot rating' },
   { value: '24/7', label: 'Human support' },
 ];
 

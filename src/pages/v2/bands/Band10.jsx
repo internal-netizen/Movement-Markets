@@ -329,7 +329,7 @@ export default function Band10({ theme = 'dark' }) {
                       <br data-dc-tpl="581" />
                       already know
                     </div>
-                    <div data-dc-tpl="582" style={S.s22[theme]}>MetaTrader 5 and Movement WebTrader, one account across both.</div>
+                    <div data-dc-tpl="582" style={S.s22[theme]}>Xpert Trader and WebTrader, one account across both.</div>
                   </div>
                 </div>
               </div>

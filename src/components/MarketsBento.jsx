@@ -63,10 +63,10 @@ export default function MarketsBento() {
           <article className="bento-card bento-wide bento-platforms">
             <div>
               <h3>Connected workflow</h3>
-              <p>Move between MetaTrader 5, cTrader, funding, watchlists and support without losing context.</p>
+              <p>Move between Xpert Trader, cTrader, funding, watchlists and support without losing context.</p>
             </div>
             <div className="platform-bubbles" aria-hidden="true">
-              <span>MT5</span>
+              <span>XT</span>
               <span>cT</span>
               <span>FX</span>
               <span>API</span>

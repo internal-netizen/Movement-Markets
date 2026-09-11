@@ -45,7 +45,7 @@ export default function GridHero() {
             <span className="mh-line"><span>No middleman.</span></span>
           </h1>
           <p className="mh-lead">
-            Institutional pricing on 300+ markets, leverage to 1:2000 and orders filled in about 12 milliseconds.
+            Institutional pricing on 300+ markets, maximum leverage up to 1:500 and orders filled in about 12 milliseconds.
           </p>
           <div className="mh-cta-row">
             <Link className="mh-btn" to="/login">Open an account</Link>
@@ -67,7 +67,7 @@ export default function GridHero() {
 
       <ul className="mh-strip" aria-label="Key trading conditions">
         <li><strong>0.0</strong><span>pips, raw spreads from</span></li>
-        <li><strong>1:2000</strong><span>maximum leverage</span></li>
+        <li><strong>1:500</strong><span>maximum leverage</span></li>
         <li><strong>300+</strong><span>instruments, six asset classes</span></li>
         <li><strong>24/7</strong><span>human support desk</span></li>
       </ul>

@@ -12,9 +12,9 @@ function DevicesBand({ flip = false }) {
       title="One account. Every screen you own."
       lead="Log in from the desk, the sofa or the departure gate. Positions, balances and history are the same wherever you open them."
       items={[
-        { title: 'Desktop', text: 'MetaTrader 5 on Windows and macOS, with Expert Advisors and Depth of Market.' },
-        { title: 'Browser', text: 'Movement WebTrader in any modern browser. Nothing to install, two-factor on every login.' },
-        { title: 'Phone and tablet', text: 'The MT5 apps on iOS and Android with full order management and charting.' },
+        { title: 'Desktop', text: 'Xpert Trader on Windows and macOS, with automated strategies and Depth of Market.' },
+        { title: 'Browser', text: 'WebTrader in any modern browser. Nothing to install, two-factor on every login.' },
+        { title: 'Phone and tablet', text: 'The XT apps on iOS and Android with full order management and charting.' },
       ]}
       cta={<Btn to="/login">Get started <ArrowIcon /></Btn>}
     />
@@ -59,7 +59,7 @@ export function PlatformPage() {
       />
       <section className="pg-section">
         <div className="pg-wrap">
-          <SectionHead eyebrow="Get started" title={platform.slug === 'webtrader' ? 'Nothing to download' : 'Trade on any device'} lead={platform.slug === 'webtrader' ? 'Log in and the terminal opens in your browser. Your MetaTrader 5 account, positions and history are already there.' : 'Free to download. Free demo. Log in with the same account on every device.'} />
+          <SectionHead eyebrow="Get started" title={platform.slug === 'webtrader' ? 'Nothing to download' : 'Trade on any device'} lead={platform.slug === 'webtrader' ? 'Log in and the terminal opens in your browser. Your Xpert Trader account, positions and history are already there.' : 'Free to download. Free demo. Log in with the same account on every device.'} />
           <Downloads platform={platform} />
         </div>
       </section>
@@ -81,7 +81,7 @@ export default function PlatformsHub() {
       <PageHero
         eyebrow="Platforms"
         title={<>Two terminals. <em>One account.</em></>}
-        lead="MetaTrader 5 for depth and automation, Movement WebTrader for anywhere access. Positions and balances stay in sync between them."
+        lead="Xpert Trader for depth and automation, WebTrader for anywhere access. Positions and balances stay in sync between them."
         actions={<><Btn to="/login">Open an account <ArrowIcon /></Btn></>}
         aside={<ImageCard src="/art/11_platforms_two_terminals.jpg" caption="Desktop, web, tablet and phone" />}
       />
@@ -99,7 +99,7 @@ export default function PlatformsHub() {
             <div className="pg-hub-tile">
               <span className="pg-tag">Both</span>
               <h3>Which should I use?</h3>
-              <p>Running Expert Advisors, need Depth of Market or trade from a desk you control: MetaTrader 5. Travelling, on a locked-down machine, or just want a tab: WebTrader. Most clients use both.</p>
+              <p>Running automated strategies, need Depth of Market or trade from a desk you control: Xpert Trader. Travelling, on a locked-down machine, or just want a tab: WebTrader. Most clients use both.</p>
               <Link to="/help" className="pg-card-link">Platform questions <ArrowIcon /></Link>
             </div>
           </div>
@@ -115,7 +115,7 @@ export default function PlatformsHub() {
               <tbody>
                 {[
                   ['Install', 'Desktop, mobile apps', 'None, browser only'],
-                  ['Automated trading', 'Expert Advisors', 'No'],
+                  ['Automated trading', 'Algos & indicators', 'No'],
                   ['Depth of Market', 'Yes', 'No'],
                   ['Charting', '38 indicators, 21 timeframes', '80+ indicators, TradingView charts'],
                   ['One-click trading', 'Yes', 'Yes'],

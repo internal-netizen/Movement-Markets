@@ -2,39 +2,14 @@ import PageShell from '../components/page/PageShell.jsx';
 import { PageHero, SectionHead, Cards, Faq, Btn, ArrowIcon, KeyValueTable, Notice, FeatureBand } from '../components/page/Blocks.jsx';
 import { ACCOUNTS, ACCOUNT_FAQ, FUNDING } from '../data/content.js';
 
-/** Round-trip cost of one EUR/USD lot on each account, from the published conditions. */
-function CostCompare() {
-  const rows = [
-    { name: 'Standard', spread: 1.0, commission: 0 },
-    { name: 'Raw', spread: 0.1, commission: 6 },
-  ].map((r) => ({ ...r, total: r.spread * 10 + r.commission }));
-  const max = Math.max(...rows.map((r) => r.total));
-  return (
-    <div className="pg-panel">
-      <div className="pg-panel-head"><h3 className="pg-h3">Cost of one lot, round trip</h3><span className="pg-tag">EUR/USD</span></div>
-      <div className="pg-form" style={{ gap: 18 }}>
-        {rows.map((r) => (
-          <div key={r.name} className="pg-range">
-            <div className="pg-result-row" style={{ color: 'var(--pg-ink)' }}><span style={{ fontWeight: 600 }}>{r.name}</span><strong>${r.total.toFixed(2)}</strong></div>
-            <div className="pg-session-bar" style={{ height: 10 }}><i style={{ left: 0, width: `${(r.total / max) * 100}%`, background: r.name === 'Raw' ? 'var(--pg-accent)' : 'var(--pg-muted)', opacity: 1 }} /></div>
-            <div className="pg-range-scale"><span>{r.spread} pip spread{r.commission ? ` + $${r.commission} commission` : ', no commission'}</span></div>
-          </div>
-        ))}
-      </div>
-      <p className="pg-notice">Typical spreads in liquid hours, one pip on EUR/USD worth $10 a lot. Wider spreads narrow the gap; volume widens it.</p>
-    </div>
-  );
-}
-
 export default function Accounts() {
   return (
     <PageShell title="Account types">
       <PageHero
         eyebrow="Accounts"
-        title="Two ways to pay. Neither hides anything."
-        lead="Standard rolls the cost into the spread with no commission. Raw shows the market spread and charges a fixed commission per lot. Same execution, same platforms, same leverage."
-        actions={<><Btn to="/login">Open an account <ArrowIcon /></Btn><Btn to="/insights/standard-vs-raw-account" ghost>Which is cheaper for me?</Btn></>}
-        aside={<CostCompare />}
+        title="Pick an account. Nothing hidden."
+        lead="Every account is compared in full below — spreads, commission, leverage and platforms, side by side."
+        actions={<Btn to="/login">Open an account <ArrowIcon /></Btn>}
       />
       <section className="pg-section" id="compare">
         <div className="pg-wrap">
@@ -59,8 +34,8 @@ export default function Accounts() {
           <Cards cols={4} items={[
             { title: 'Negative balance protection', text: 'You can never owe more than your balance. Gaps that take an account below zero are reset at our cost.' },
             { title: 'Segregated funds', text: 'Client money sits in segregated accounts at tier-one banks, apart from company funds.' },
-            { title: 'Free demo', text: 'Live pricing, virtual balance, no expiry while you use it. Practise on either account type.' },
-            { title: 'Swap-free option', text: 'Available on both accounts for eligible clients, with no other change to conditions.' },
+            { title: 'Free demo', text: 'Live pricing, virtual balance, no expiry while you use it. Practise on any account type.' },
+            { title: 'Swap-free option', text: 'Available on every account for eligible clients, with no other change to conditions.' },
           ]} />
         </div>
       </section>

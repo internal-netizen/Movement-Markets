@@ -80,7 +80,7 @@ export default function Contact() {
           <SectionHead eyebrow="Self-serve" title="Faster than asking" />
           <Cards cols={4} items={[
             { title: 'Help centre', text: 'Answers on verification, funding, leverage and platforms.', to: '/help', linkLabel: 'Browse answers' },
-            { title: 'Platform guides', text: 'Installing and logging in to MetaTrader 5 and WebTrader.', to: '/platforms', linkLabel: 'Platforms' },
+            { title: 'Platform guides', text: 'Installing and logging in to Xpert Trader and WebTrader.', to: '/platforms', linkLabel: 'Platforms' },
             { title: 'Legal documents', text: 'Every agreement, policy and disclosure in full.', to: '/legal', linkLabel: 'Legal hub' },
             { title: 'Trading tools', text: 'Calendar, market hours and calculators.', to: '/tools', linkLabel: 'Open tools' },
           ]} />

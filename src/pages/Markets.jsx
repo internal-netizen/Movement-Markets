@@ -70,7 +70,7 @@ function PlatformsStrip() {
   return (
     <section className="pg-section is-alt">
       <div className="pg-wrap">
-        <SectionHead eyebrow="Platforms" title="Trade it on the platform you already know" lead="Every market is available on MetaTrader 5 and Movement WebTrader, from one account." />
+        <SectionHead eyebrow="Platforms" title="Trade it on the platform you already know" lead="Every market is available on Xpert Trader and WebTrader, from one account." />
         <Cards cols={2} items={PLATFORMS.map((p) => ({ title: p.name, text: p.lead, tag: p.tag, to: `/platforms/${p.slug}`, linkLabel: `About ${p.name}` }))} />
       </div>
     </section>

@@ -24,7 +24,7 @@ export default function About() {
           <div className="pg-prose">
             <p>Movement Markets began as an execution project: could a broker pass institutional liquidity straight through to a retail account, keep the spread the market’s own, and still be a business? The answer was yes, if everything else was lean. So the company was designed backwards from that constraint.</p>
             <p>Pricing comes from aggregated bank and non-bank liquidity and is shown as it arrives. Costs are one commission on Raw accounts or one all-in spread on Standard. Funding is free in both directions. Verification is done by a person, usually within the hour.</p>
-            <p>Today clients trade forex, indices, metals and energy, shares and crypto from one account, on MetaTrader 5 or our own WebTrader, with a support desk that is staffed by traders around the clock and empowered to actually fix things.</p>
+            <p>Today clients trade forex, indices, metals and energy, shares and crypto from one account, on Xpert Trader or our own WebTrader, with a support desk that is staffed by traders around the clock and empowered to actually fix things.</p>
             <p>Every agreement, policy and disclosure that governs your account is published in full in our legal hub.</p>
           </div>
         </div>

@@ -262,7 +262,7 @@
 .pg-cta-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-end; }
 
 /* --- account cards --- */
-.pg-plans { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.pg-plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .pg-plan { padding: 30px; border-radius: 24px; background: var(--pg-surface); border: 1px solid var(--pg-line); display: flex; flex-direction: column; gap: 18px; position: relative; }
 .pg-plan.is-featured { border-color: var(--pg-accent); box-shadow: 0 0 0 4px var(--pg-accent-soft); }
 .pg-plan-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
@@ -369,6 +369,7 @@
 /* --- responsive --- */
 @media (max-width: 1024px) {
   .pg-stats, .pg-tiers { grid-template-columns: repeat(2, 1fr); }
+  .pg-plans { grid-template-columns: minmax(0, 1fr); }
   .pg-cards.cols-3, .pg-cards.cols-4, .pg-article-list, .pg-hub { grid-template-columns: repeat(2, 1fr); }
   /* minmax(0,1fr) — a bare 1fr keeps a min-content floor, which lets a long
      address or email push the single column wider than the phone viewport. */

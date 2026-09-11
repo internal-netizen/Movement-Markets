@@ -21,8 +21,8 @@ export const NAV = [
       {
         title: 'Platforms',
         links: [
-          { to: '/platforms/metatrader-5', label: 'MetaTrader 5', hint: 'Desktop, web & mobile' },
-          { to: '/platforms/webtrader', label: 'Movement WebTrader', hint: 'Trade in the browser' },
+          { to: '/platforms/xpert-trader', label: 'Xpert Trader', hint: 'Desktop, web & mobile' },
+          { to: '/platforms/webtrader', label: 'WebTrader', hint: 'Trade in the browser' },
           { to: '/platforms', label: 'Compare platforms', hint: 'Which one fits', muted: true },
         ],
       },

@@ -1,22 +1,22 @@
-// BandPlatformDeep — Platform deep-dive (MT5 / WebTrader / Mobile).
+// BandPlatformDeep — Platform deep-dive (FIX API / WebTrader / Mobile).
 // Follows the project's band pattern: theme prop + per-theme S style objects.
 
 const PLATFORMS = [
   {
-    id: 'mt5',
-    name: 'MetaTrader 5',
-    badge: 'Industry standard',
-    description: 'The world\'s most widely used trading terminal. Advanced charting, 38 built-in indicators, multi-asset support, and an extensive library of Expert Advisors.',
-    features: ['38 built-in technical indicators', 'Depth of Market (DOM)', 'Expert Advisors & algo trading', 'Multi-asset in one terminal', 'Strategy Tester'],
-    cta: 'About MetaTrader 5',
-    href: '/platforms/metatrader-5',
+    id: 'fix-api',
+    name: 'FIX API',
+    badge: 'Institutional execution',
+    description: 'Direct market access over a FIX session. Low-latency connectivity for desks that run their own execution, risk and order management against our liquidity.',
+    features: ['FIX 4.4 order and market data', 'Low-latency routing', 'Full depth of book', 'Bring your own OMS or EMS', 'Dedicated integration support'],
+    cta: 'Talk to the desk',
+    href: '/contact',
   },
   {
     id: 'webtrader',
-    name: 'Movement WebTrader',
+    name: 'WebTrader',
     badge: 'No download',
-    description: 'A full trading terminal in your browser. The same account, the same prices and the same execution as MetaTrader 5, on whatever machine is in front of you.',
-    features: ['Nothing to install', 'TradingView-powered charting', 'One-click trading', 'Syncs with MT5 in real time', 'Two-factor login'],
+    description: 'A full trading terminal in your browser. Your account, raw pricing and the same execution engine, on whatever machine is in front of you.',
+    features: ['Nothing to install', 'One-click trading', 'Positions sync in real time', 'Two-factor login'],
     cta: 'Launch WebTrader',
     href: '/platforms/webtrader',
   },
@@ -27,7 +27,7 @@ const PLATFORMS = [
     description: 'Full trading functionality on iOS and Android. Manage positions, receive alerts, and execute instantly — wherever you are in the world.',
     features: ['iOS & Android native apps', 'Push notifications & alerts', 'Biometric login', 'Full order management', 'Live charts & watchlists'],
     cta: 'Get the apps',
-    href: '/platforms/metatrader-5',
+    href: '/platforms',
   },
 ];
 
