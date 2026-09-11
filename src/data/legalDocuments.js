@@ -2228,7 +2228,7 @@ This Notice should be read with the Client Agreement, Contract Specifications, t
         heading: 'Use of leverage',
         content: `Leverage allows you to control a Transaction whose notional value is substantially greater than the Margin committed. Profit and loss are calculated by reference to the full Transaction Size, not only the Margin. A small movement in the Underlying Asset can therefore create a large change in account Equity and can quickly exhaust the funds available in the Client Account.
 
-Movement Markets may make leverage of up to 1:2000 available. The actual level may be lower and can vary by Client Account, Financial Instrument, Transaction Size, trading volume, Client classification, concentration and market conditions. Movement Markets may apply fixed, variable, tiered or dynamic leverage and may reduce or withdraw leverage where permitted under the Client Agreement. A change in leverage may increase Margin Requirements for existing Positions.`,
+Movement Markets may make leverage of up to 1:500 available. The actual level may be lower and can vary by Client Account, Financial Instrument, Transaction Size, trading volume, Client classification, concentration and market conditions. Movement Markets may apply fixed, variable, tiered or dynamic leverage and may reduce or withdraw leverage where permitted under the Client Agreement. A change in leverage may increase Margin Requirements for existing Positions.`,
       },
       {
         heading: 'Margin requirements and Stop-Out',

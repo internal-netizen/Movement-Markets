@@ -105,7 +105,7 @@ export function CtaBand() {
         <div>
           <p className="pg-eyebrow">Get started</p>
           <h2 className="pg-h2">Ready to trade the move?</h2>
-          <p className="pg-lead">Open an account in minutes. Raw spreads, leverage to 1:2000 and a desk that answers around the clock.</p>
+          <p className="pg-lead">Open an account in minutes. Raw spreads, leverage to 1:500 and a desk that answers around the clock.</p>
         </div>
         <div className="pg-cta-actions">
           <Btn to="/login">Open an account <ArrowIcon /></Btn>

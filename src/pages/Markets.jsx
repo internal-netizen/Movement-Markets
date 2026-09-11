@@ -134,7 +134,7 @@ export default function MarketsHub() {
           <Stats items={[
             { value: '300+', label: 'Instruments' },
             { value: '0.0', unit: 'pips', label: 'Raw FX spreads from' },
-            { value: '1:2000', label: 'Maximum leverage' },
+            { value: '1:500', label: 'Maximum leverage' },
             { value: '24/7', label: 'Crypto, 24/5 everything else' },
           ]} />
         </div>

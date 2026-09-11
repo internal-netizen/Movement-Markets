@@ -16,7 +16,7 @@ const COUNT = ['.pg-stat strong', '.pg-tier strong', '.mh-strip strong'].join(',
 
 const reduced = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/** "1:2000" → prefix "1:", number 2000, suffix "". Returns null for text without a leading number. */
+/** "1:500" → prefix "1:", number 2000, suffix "". Returns null for text without a leading number. */
 function parseNumber(text) {
   const m = /^([^\d]*)(\d[\d,]*)(\.\d+)?(.*)$/s.exec(text.trim());
   if (!m) return null;

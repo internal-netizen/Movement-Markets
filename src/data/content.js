@@ -169,7 +169,7 @@ export const HELP = [
   {
     title: 'Leverage & risk',
     items: [
-      { q: 'What leverage can I use?', a: 'Up to 1:2000 on forex majors, lower on other asset classes. You can lower your own maximum from the client portal at any time.' },
+      { q: 'What leverage can I use?', a: 'Up to 1:500 on forex majors, lower on other asset classes. You can lower your own maximum from the client portal at any time.' },
       { q: 'When does a margin call happen?', a: 'When your equity falls to 50% of the margin used. Positions are closed automatically at 30% to protect the account.' },
       { q: 'Is there negative balance protection?', a: 'Yes, for every retail client.' },
     ],
@@ -262,9 +262,9 @@ export const ARTICLES = [
     minutes: 5,
     summary: 'How leverage lets you control a large position with a small deposit, and why margin, not leverage, is the number to watch.',
     body: [
-      'Leverage is the ratio between the size of a position and the money you have to put up to open it. At 1:100, a 100,000-unit position needs 1,000 units of margin. At 1:2000 it needs 50.',
+      'Leverage is the ratio between the size of a position and the money you have to put up to open it. At 1:100, a 100,000-unit position needs 1,000 units of margin. At 1:500 it needs 200.',
       'Margin is that deposit. It is not a fee; it is set aside while the position is open and released when it closes. Your free margin is what remains to open new positions or absorb losses.',
-      'Higher leverage does not change how much a position can win or lose. A one-pip move on a standard lot of EUR/USD is 10 dollars whether your leverage is 1:30 or 1:2000. What changes is how much of your account is tied up and how close a loss brings you to a margin call.',
+      'Higher leverage does not change how much a position can win or lose. A one-pip move on a standard lot of EUR/USD is 10 dollars whether your leverage is 1:30 or 1:500. What changes is how much of your account is tied up and how close a loss brings you to a margin call.',
       'A margin call happens when your equity falls to a set percentage of the margin used, 50% on our accounts. At the stop-out level, 30%, positions are closed automatically starting with the largest loser.',
       'The practical rule: pick your position size from the amount you are willing to lose and your stop distance, then check that the margin required leaves you plenty of room. Leverage is a tool for capital efficiency, not a reason to trade bigger.',
     ],
