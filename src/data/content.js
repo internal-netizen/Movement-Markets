@@ -83,7 +83,7 @@ export const ACCOUNTS = [
       ['Swap-free', 'Available'],
       ['Margin call / stop out', '50% / 30%'],
       ['Minimum withdrawal', '$20'],
-      ['Platforms', 'Xpert Trader'],
+      ['Platforms', 'XT'],
     ],
   },
   {
@@ -102,7 +102,7 @@ export const ACCOUNTS = [
       ['Swap-free', 'Available'],
       ['Margin call / stop out', '50% / 30%'],
       ['Minimum withdrawal', '$20'],
-      ['Platforms', 'Xpert Trader'],
+      ['Platforms', 'XT'],
     ],
   },
   {
@@ -121,7 +121,7 @@ export const ACCOUNTS = [
       ['Swap-free', 'Available'],
       ['Margin call / stop out', 'By agreement'],
       ['Minimum withdrawal', '$20'],
-      ['Platforms', 'XT, WebTrader, FIX, API'],
+      ['Platforms', 'XT · WebTrader · FIX'],
     ],
   },
 ];
