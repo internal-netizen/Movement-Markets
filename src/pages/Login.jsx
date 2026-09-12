@@ -141,7 +141,7 @@ export default function Login() {
             </div>
             <div className="lg-art-foot">
               <Svg d={Icon.shield} size={15} />
-              <span>Segregated client funds · Negative balance protection</span>
+              <span>Segregated client funds · Negative balance protection on eligible retail accounts</span>
             </div>
           </aside>
 
@@ -217,6 +217,20 @@ export default function Login() {
                 <p className="lg-notice is-warn">
                   <Svg d={Icon.info} size={16} />
                   <span>{COMPANY_DETAILS.shortName} does not offer services to residents of {form.country}. See the <Link to="/legal">legal documents</Link> for the full list.</span>
+                </p>
+              )}
+
+              {mode === 'register' && !restricted && form.country && (
+                <p className="lg-notice">
+                  <Svg d={Icon.info} size={16} />
+                  <span>
+                    {COMPANY_DETAILS.shortName} is registered in {COMPANY_DETAILS.jurisdiction} and is not
+                    authorised in {form.country}. By opening an account you confirm that you approached us on
+                    your own initiative and that we did not market or solicit these services to you in your
+                    country of residence. Trading conditions, including leverage, may differ from those a locally
+                    authorised firm could offer you. See the <Link to="/client-agreement">client agreement</Link> and
+                    the <Link to="/risk-disclosure">risk disclosure</Link>.
+                  </span>
                 </p>
               )}
 

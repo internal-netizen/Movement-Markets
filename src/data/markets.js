@@ -35,7 +35,7 @@ export const MARKETS = [
       { q: 'When is the forex market open?', a: 'Forex trades continuously from the Sydney open on Monday morning to the New York close on Friday evening. Our market hours tool shows each session in your local time and whether it is open right now.' },
       { q: 'What does a 0.0 pip spread actually mean?', a: 'On a Raw account the bid and ask can be identical for the most liquid pairs during active sessions. You pay a fixed commission per lot instead, so the total cost is transparent and usually lower than an all-in spread.' },
       { q: 'Do you allow scalping and automated strategies?', a: 'Yes. There are no restrictions on trading style, holding time or automation. Automated strategies run natively on Xpert Trader.' },
-      { q: 'Is there negative balance protection?', a: 'Yes. Retail clients cannot lose more than the balance of their account. If a gap leaves an account negative, it is reset to zero.' },
+      { q: 'Is there negative balance protection?', a: 'Negative balance protection is available on eligible retail accounts — see the Client Agreement.' },
     ],
   },
   {
@@ -148,7 +148,7 @@ export const MARKETS = [
       { value: '24/7', label: 'Market access' },
       { value: '1:100', label: 'Maximum leverage' },
       { value: '15+', label: 'Crypto pairs' },
-      { value: '0', label: 'Overnight fees on Raw' },
+      { value: '0', label: 'Overnight fees on Raw (promotional)' },
     ],
     instruments: [
       { symbol: 'BTC/USD', name: 'Bitcoin vs US Dollar', spread: '12', leverage: '1:100' },
@@ -166,7 +166,7 @@ export const MARKETS = [
     ],
     faq: [
       { q: 'Can I trade crypto at the weekend?', a: 'Yes. Crypto CFDs are available 24/7 with a short maintenance window each week.' },
-      { q: 'Is there a swap on crypto?', a: 'Standard accounts pay a daily financing charge. Raw accounts trade crypto swap-free.' },
+      { q: 'Is there a swap on crypto?', a: 'Standard accounts pay a daily financing charge. Raw accounts currently trade crypto swap-free as a promotional condition, which we may withdraw or change.' },
       { q: 'Why is the leverage lower than forex?', a: 'Crypto is far more volatile than currencies, so margin requirements are higher to protect both the client and the broker from gaps.' },
     ],
   },

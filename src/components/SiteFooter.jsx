@@ -26,7 +26,7 @@ export default function SiteFooter() {
             <BrandLogo />
           </Link>
           <p className="footer-brand-desc">
-            Next-generation execution technology, ultra-tight raw spreads, and institutional liquidity routing built for traders who notice the difference.
+            Next-generation execution technology and ultra-tight raw spreads, built for traders who notice the difference.
           </p>
 
           <a className="support-link" href={`mailto:${COMPANY_DETAILS.supportEmail}`}>
@@ -51,7 +51,7 @@ export default function SiteFooter() {
           <h3>Trading</h3>
           <Link to="/accounts">Account Types</Link>
           <Link to="/accounts#compare">Spreads & Commissions</Link>
-          <Link to="/accounts#funding">Deposits & Withdrawals</Link>
+          <Link to="/#funding">Deposits &amp; Withdrawals</Link>
           <Link to="/partners">Partner Programme</Link>
           <Link to="/login">Open an Account</Link>
         </div>

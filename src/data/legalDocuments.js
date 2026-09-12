@@ -94,7 +94,11 @@ The Client should read this Agreement together with the Risk Disclosure Notice b
 
 1.2 The Company is registered in Saint Lucia under Registration Number 2026-00660, with its registered office at Unit 1, La Place Creole Building, Rodney Village, Rodney Bay, Gros-Islet, Saint Lucia. The Company provides an online trading platform offering access to Contracts for Difference and other derivative products made available by the Company.
 
-1.3 This Client Agreement, together with the Account Opening Application Form, Risk Disclosure Notice, Privacy Policy, Complaints Handling Procedure, Conflict of Interest Policy, Contract Specifications and any other legal document expressly incorporated into it or published in the legal-documents section of the Website, as amended from time to time, constitutes the agreement between the Company and the Client and governs the Services, Client Account and all CFD activity conducted with the Company.
+1.3 This Client Agreement, together with the Account Opening Application Form, Risk Disclosure Notice, Privacy Policy, Conflict of Interest Policy, Contract Specifications and any other legal document expressly incorporated into it or published in the legal-documents section of the Website, as amended from time to time, constitutes the agreement between the Company and the Client and governs the Services, Client Account and all CFD activity conducted with the Company.
+
+1.3A Where any conflict or inconsistency arises between the documents forming this Agreement, they shall take precedence in the following order: (a) this Client Agreement; (b) the General Business Terms; (c) the Contract Specifications; and (d) any other content published on the Website.
+
+1.3B Marketing and informational content published on the Website, including any indicative spread, commission, leverage or other trading condition presented in a table, summary or illustration, is provided for information only, does not form part of this Agreement, and is not binding on the Company. The Client should rely on the documents listed in clause 1.3A.
 
 1.4 This Agreement supersedes any previous agreement, arrangement, representation or statement concerning the Services, whether made by the Company, an Introducer or another person, except where expressly incorporated into this Agreement.
 
@@ -279,6 +283,22 @@ g) Headings are included for convenience only and shall not affect the interpret
 h) Where an obligation applies to two or more Clients, that obligation shall apply to them jointly and severally;
 
 i) Where there is any conflict between this Agreement and the Contract Specifications for a particular Financial Instrument, the Contract Specifications shall apply to the specific trading condition concerned, unless Applicable Law requires otherwise; and j) A reference to the Company includes, where appropriate, its directors, officers, employees, agents, delegates, service providers, successors and permitted assigns, without making any such person a party to this Agreement.`,
+      },
+      {
+        heading: 'Section A · 2A. Client Categorisation',
+        content: `2A.1 The Company categorises each Client as either a Retail Client or a Professional Client. The category assigned to the Client is stated in the Personal Area and determines the protections that apply to the Client Account.
+
+2A.2 A Retail Client is any Client who is not categorised as a Professional Client. Retail Clients receive the highest level of protection available under this Agreement, including Negative Balance Protection where the Company confirms it is available for the relevant Client Account under clause 8.1.
+
+2A.3 A Professional Client is a Client who has been accepted onto an Institutional Account. The Company may categorise a Client as a Professional Client where the Client satisfies the qualifying criteria in clause 2A.4 and confirms in writing that the Client understands the protections that are reduced or withdrawn as a result.
+
+2A.4 The qualifying criteria for categorisation as a Professional Client are that the Client meets the minimum deposit published for the Institutional Account and satisfies at least one of the following: a) the Client has carried out transactions of significant size in the relevant market with reasonable frequency; b) the Client works, or has worked, in the financial sector in a role requiring knowledge of the relevant transactions; or c) the Client is a corporate entity, partnership, fund or other institution trading in the course of its business.
+
+2A.5 A Client may request a change of category at any time by written request to the Company. The Company may accept or refuse the request at its discretion and will confirm any change in the Personal Area before it takes effect. A change of category applies to new Transactions only and does not alter the treatment of Positions already open.
+
+2A.6 The following differ by category: a) Negative Balance Protection, which applies to Retail Clients in accordance with clause 8.1 and applies to Professional Clients only where the Company expressly confirms it; b) Margin Call and Stop-Out levels, which are as published for Retail Clients and may be agreed individually with Professional Clients; and c) leverage, Contract Specifications and execution arrangements, which may be negotiated with Professional Clients.
+
+2A.7 The Company may review a Client's category at any time and may re-categorise a Client as a Retail Client where the Client no longer satisfies the criteria in clause 2A.4.`,
       },
       {
         heading: 'Section A · 3. Client Acceptance and Due Diligence',
@@ -2222,7 +2242,7 @@ The Notice cannot identify every risk, explain every feature or describe how a r
 
 This Notice is provided for information and risk-disclosure purposes. It is not marketing material, investment research, personal advice, a recommendation or a solicitation where such activity would be unlawful. Movement Markets provides execution services and does not advise you on the merits of any Transaction.
 
-This Notice should be read with the Client Agreement, Contract Specifications, trading and execution terms, Privacy Policy, Complaints Handling Procedure, Conflicts of Interest Policy, and every other policy or notice made available through the Website, Personal Area or Trading Platform. The current Contract Specifications and Client Agreement govern the particular conditions of an instrument or account, subject to Applicable Law.`,
+This Notice should be read with the Client Agreement, Contract Specifications, trading and execution terms, Privacy Policy, Conflicts of Interest Policy, and every other policy or notice made available through the Website, Personal Area or Trading Platform. The current Contract Specifications and Client Agreement govern the particular conditions of an instrument or account, subject to Applicable Law.`,
       },
       {
         heading: 'Use of leverage',

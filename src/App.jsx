@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import HomeGrid from './pages/HomeGrid.jsx';
-import HomeMix from './pages/HomeMix.jsx';
-import Home from './pages/Home.jsx';
 import Login from './pages/Login.jsx';
+import NotFound from './pages/NotFound.jsx';
 import Legal from './pages/Legal.jsx';
 import CookieConsent from './components/CookieConsent.jsx';
 import IntroLoader from './components/IntroLoader.jsx';
@@ -23,8 +22,6 @@ import Calculators from './pages/tools/Calculators.jsx';
 const TITLES = {
   '/': 'Movement Markets — Trade the Move',
   '/login': 'Login | Movement Markets',
-  '/v1': 'Movement Markets — Previous home',
-  '/v3': 'Movement Markets — Home (mixed bands)',
   '/legal': 'Legal Documents & Policies | Movement Markets',
   '/terms': 'Website Terms of Use | Movement Markets',
   '/privacy': 'Privacy Policy | Movement Markets',
@@ -84,12 +81,11 @@ export default function App() {
         <Route path="/affiliate-agreement" element={<Legal defaultDoc="affiliate-agreement" />} />
         <Route path="/affiliates" element={<Legal defaultDoc="affiliate-agreement" />} />
         <Route path="/general-business-terms" element={<Legal defaultDoc="general-business-terms" />} />
-        {/* The previous home, kept intact and reachable. */}
-        <Route path="/v1" element={<Home />} />
-        {/* Retained so existing links to the design cuts keep working. */}
-        <Route path="/v2" element={<HomeGrid />} />
-        <Route path="/v3" element={<HomeMix />} />
-        <Route path="*" element={<HomeGrid />} />
+        {/* /v1 and /v3 were earlier designs that contradicted the live site;
+            /v2 was a duplicate of /. Unknown URLs now 404 instead of silently
+            rendering the homepage. */}
+        <Route path="/v2" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       {/* Global Cookiebot Cookie Consent CMP Banner & Modal */}

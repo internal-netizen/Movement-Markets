@@ -29,9 +29,9 @@ export const NAV = [
       {
         title: 'Accounts',
         links: [
-          { to: '/accounts', label: 'Account types', hint: 'Standard & Raw' },
+          { to: '/accounts', label: 'Account types', hint: 'Standard, Raw & Institutional' },
           { to: '/accounts#compare', label: 'Spreads & commissions', hint: 'Full comparison' },
-          { to: '/accounts#funding', label: 'Deposits & withdrawals', hint: 'Fast, fee-free funding' },
+          { to: '/#funding', label: 'Deposits & withdrawals', hint: 'Fast, fee-free funding' },
           { to: '/login', label: 'Open an account', hint: 'Takes a few minutes', muted: true },
         ],
       },

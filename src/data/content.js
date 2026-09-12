@@ -9,7 +9,7 @@ export const PLATFORMS = [
     name: 'Xpert Trader',
     tag: 'Recommended',
     title: 'Xpert Trader, connected to raw liquidity',
-    lead: 'Our own terminal, running on our execution stack. Twenty-one timeframes, native hedging, Depth of Market and unrestricted automated strategies on desktop, web and mobile.',
+    lead: 'Our trading terminal, connected to our execution stack. Multiple timeframes, native hedging, Depth of Market and unrestricted automated strategies on desktop, web and mobile.',
     highlights: ['No requotes', 'Hedging & netting', 'Algos & custom indicators', 'Depth of Market'],
     downloads: [
       { os: 'Windows', note: 'PC & laptop', href: '/login' },
@@ -19,10 +19,10 @@ export const PLATFORMS = [
       { os: 'Android', note: 'Phone & tablet', href: '/login' },
     ],
     features: [
-      ['Chart timeframes', '21'],
-      ['Built-in indicators', '38'],
-      ['Graphical objects', '44'],
-      ['Pending order types', '6'],
+      ['Chart timeframes', 'Multiple, from tick to monthly'],
+      ['Built-in indicators', 'Full standard library'],
+      ['Graphical objects', 'Full drawing toolset'],
+      ['Pending order types', 'Limit, stop and stop-limit'],
       ['Depth of Market', 'Yes'],
       ['Economic calendar', 'Built in'],
       ['Automated trading', 'Algos & custom indicators'],
@@ -32,7 +32,7 @@ export const PLATFORMS = [
     faq: [
       { q: 'Is Xpert Trader free?', a: 'Yes. Download it for any device from your client portal and log in with your Movement Markets account. Demo accounts are free too.' },
       { q: 'Can I bring my own automated strategies?', a: 'Yes. Xpert Trader runs custom strategies and indicators, and the FIX API is open if you would rather run your own execution stack. Our desk will help you port an existing setup.' },
-      { q: 'Does the mobile app support all order types?', a: 'Market, limit, stop and stop-limit orders, plus full position management. Charting includes 30 indicators and 24 objects.' },
+      { q: 'Does the mobile app support all order types?', a: 'Market, limit, stop and stop-limit orders, plus full position management. Charting carries the standard indicator and drawing toolset.' },
       { q: 'Are there requotes?', a: 'No. Orders are filled at the best available price. During fast markets you may see slippage, which can be positive or negative, but never a requote.' },
     ],
   },
@@ -49,8 +49,8 @@ export const PLATFORMS = [
     features: [
       ['Install required', 'None'],
       ['Chart types', 'Candles, bars, line, Heikin Ashi'],
-      ['Indicators', '80+'],
-      ['Drawing tools', '50+'],
+      ['Indicators', 'Full standard library'],
+      ['Drawing tools', 'Full drawing toolset'],
       ['One-click trading', 'Yes'],
       ['Account sync', 'Shared with XT in real time'],
       ['Two-factor login', 'Yes'],
@@ -83,7 +83,7 @@ export const ACCOUNTS = [
       ['Swap-free', 'Available'],
       ['Margin call / stop out', '50% / 30%'],
       ['Minimum withdrawal', '$20'],
-      ['Platforms', 'XT'],
+      ['Platforms', 'XT · WebTrader'],
     ],
   },
   {
@@ -102,7 +102,7 @@ export const ACCOUNTS = [
       ['Swap-free', 'Available'],
       ['Margin call / stop out', '50% / 30%'],
       ['Minimum withdrawal', '$20'],
-      ['Platforms', 'XT'],
+      ['Platforms', 'XT · WebTrader'],
     ],
   },
   {
@@ -131,14 +131,7 @@ export const ACCOUNT_FAQ = [
   { q: 'Can I switch later?', a: 'Yes. Ask support or request it from the client portal. Open positions are unaffected; new trades take the new account’s pricing.' },
   { q: 'Is there a demo account?', a: 'Every client gets a free demo that mirrors live pricing on every account type. It never expires while you keep using it.' },
   { q: 'How do deposits and withdrawals work?', a: 'Cards, bank transfer, local payment methods and crypto. Deposits are credited immediately in most cases and we do not charge withdrawal fees. Withdrawals go back to the method the funds arrived from.' },
-  { q: 'What is negative balance protection?', a: 'You can never owe more than your balance. If a gap takes the account below zero it is reset to zero at our cost.' },
-];
-
-export const FUNDING = [
-  { method: 'Visa / Mastercard', time: 'Instant', fee: 'Free' },
-  { method: 'Bank transfer', time: '1–3 business days', fee: 'Free' },
-  { method: 'Local payment methods', time: 'Instant to 24h', fee: 'Free' },
-  { method: 'USDT / BTC', time: 'After network confirmation', fee: 'Free' },
+  { q: 'What is negative balance protection?', a: 'Where it applies, it means a gap cannot leave you owing more than your balance. Negative balance protection is available on eligible retail accounts — see the Client Agreement.' },
 ];
 
 export const HELP = [
@@ -153,9 +146,9 @@ export const HELP = [
   {
     title: 'Deposits & withdrawals',
     items: [
-      { q: 'What is the minimum deposit?', a: '$50 on a Standard account and $500 on a Raw account. There is no maximum.' },
+      { q: 'What is the minimum deposit?', a: '$50 on a Standard account, $1,000 on a Raw account and $20,000 on an Institutional account. There is no maximum.' },
       { q: 'How fast are withdrawals?', a: 'Requests are processed within a few hours during business days. Card and e-wallet withdrawals usually land the same day; bank transfers can take one to three days.' },
-      { q: 'Do you charge withdrawal fees?', a: 'No. Your bank or payment provider may apply its own charges.' },
+      { q: 'Do you charge withdrawal fees?', a: 'No. Your bank or payment provider may apply its own charges. The minimum withdrawal is $20.' },
     ],
   },
   {
@@ -171,15 +164,13 @@ export const HELP = [
     items: [
       { q: 'What leverage can I use?', a: 'Up to 1:500 on forex majors, lower on other asset classes. You can lower your own maximum from the client portal at any time.' },
       { q: 'When does a margin call happen?', a: 'When your equity falls to 50% of the margin used. Positions are closed automatically at 30% to protect the account.' },
-      { q: 'Is there negative balance protection?', a: 'Yes, for every retail client.' },
+      { q: 'Is there negative balance protection?', a: 'Negative balance protection is available on eligible retail accounts — see the Client Agreement.' },
     ],
   },
   {
     title: 'Platforms',
     items: [
       { q: 'Which platforms do you offer?', a: 'Xpert Trader on Windows, macOS, iOS and Android, and WebTrader in any modern browser.' },
-      { q: 'Can I use TradingView charts?', a: 'WebTrader includes TradingView-powered charting. Xpert Trader uses its own charting engine.' },
-      { q: 'Do you offer a VPS?', a: 'Yes, free for clients trading over 10 lots a month, otherwise at a low monthly fee.' },
     ],
   },
   {
@@ -216,7 +207,7 @@ export const PARTNER_PERKS = [
 ];
 
 export const ABOUT_VALUES = [
-  { title: 'Raw over retail', text: 'We built the business on institutional pricing passed through, not a retail markup. The spread you see is what the market is doing.' },
+  { title: 'Raw over retail', text: 'We built the business on institutional pricing rather than a retail markup. Raw accounts show the spread and the commission separately, so you can see what each costs.' },
   { title: 'Speed is a feature', text: 'Execution, funding, verification and support are all measured in minutes or milliseconds. Slowness is treated as a defect.' },
   { title: 'Nothing hidden', text: 'Commissions, swaps and every policy are published. If a cost is not on the page, it does not exist.' },
   { title: 'Humans on the desk', text: 'Support is staffed by people who trade, around the clock, and who can actually change something on your account.' },
@@ -224,7 +215,7 @@ export const ABOUT_VALUES = [
 
 export const ABOUT_NUMBERS = [
   { value: '300+', label: 'Instruments across six asset classes' },
-  { value: '12 ms', label: 'Average order execution' },
+  { value: '12 ms', label: 'Median order execution' },
   { value: '24/7', label: 'Multilingual support' },
   { value: '0', label: 'Deposit or withdrawal fees' },
 ];

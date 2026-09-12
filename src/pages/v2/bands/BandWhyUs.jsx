@@ -16,7 +16,7 @@ const PILLARS = [
   },
   {
     number: '03',
-    title: 'Execution in about 12ms',
+    title: 'Median execution of 12ms',
     body: 'Purpose-built infrastructure routes orders in milliseconds. Speed isn\'t a selling point — it\'s our baseline.',
     accent: false,
   },

@@ -23,7 +23,7 @@ const METHODS = [
 
 const FEATURES = [
   { icon: <Icon.Lock />, title: 'Segregated client funds', desc: 'Your money is held separately from company funds at Tier-1 banks.' },
-  { icon: <Icon.Zap />, title: 'Same-day processing', desc: 'Withdrawals submitted before 12:00 UTC processed same business day.' },
+  { icon: <Icon.Zap />, title: 'Fast processing', desc: 'Requests are processed within a few hours during business days; card and e-wallet usually same day, bank transfers one to three days.' },
   { icon: <Icon.Globe />, title: '20+ base currencies', desc: 'Fund in your local currency and avoid conversion costs.' },
   { icon: <Icon.Shield />, title: 'SSL-encrypted transactions', desc: '256-bit encryption on every deposit and withdrawal request.' },
 ];

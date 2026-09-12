@@ -24,7 +24,7 @@ export default function About() {
           <div className="pg-prose">
             <p>Movement Markets began as an execution project: could a broker pass institutional liquidity straight through to a retail account, keep the spread the market’s own, and still be a business? The answer was yes, if everything else was lean. So the company was designed backwards from that constraint.</p>
             <p>Pricing comes from aggregated bank and non-bank liquidity and is shown as it arrives. Costs are one commission on Raw accounts or one all-in spread on Standard. Funding is free in both directions. Verification is done by a person, usually within the hour.</p>
-            <p>Today clients trade forex, indices, metals and energy, shares and crypto from one account, on Xpert Trader or our own WebTrader, with a support desk that is staffed by traders around the clock and empowered to actually fix things.</p>
+            <p>Clients trade forex, indices, metals and energy, shares and crypto from one account, on Xpert Trader or our own WebTrader, with a support desk that is staffed by traders around the clock and empowered to actually fix things.</p>
             <p>Every agreement, policy and disclosure that governs your account is published in full in our legal hub.</p>
           </div>
         </div>
@@ -51,7 +51,7 @@ export default function About() {
         <div className="pg-wrap">
           <SectionHead eyebrow="Where next" title="Look under the hood" />
           <Cards cols={3} items={[
-            { title: 'Account types', text: 'Standard and Raw, side by side, every condition on one page.', to: '/accounts', linkLabel: 'Compare accounts' },
+            { title: 'Account types', text: 'Standard, Raw and Institutional, side by side, every condition on one page.', to: '/accounts', linkLabel: 'Compare accounts' },
             { title: 'Legal hub', text: 'Client agreement, risk disclosure, order execution and every policy, in full.', to: '/legal', linkLabel: 'Read the documents' },
             { title: 'Partners', text: 'Refer traders and earn a per-lot rebate for as long as they trade.', to: '/partners', linkLabel: 'Partner programme' },
           ]} />

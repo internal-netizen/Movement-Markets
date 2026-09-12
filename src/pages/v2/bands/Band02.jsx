@@ -389,7 +389,7 @@ export default function Band02({ theme = 'dark' }) {
           <div className="mb-card" style={S.card[theme]}>
             <ExecutionCard theme={theme} />
             <div style={S.cardTitle[theme]}>Execution you can time</div>
-            <div style={S.cardDesc[theme]}>Around 12ms average fill across the major pairs during peak sessions.</div>
+            <div style={S.cardDesc[theme]}>A median 12ms fill across the major pairs during peak sessions.</div>
           </div>
 
           {/* Card 3: Growth / chart */}

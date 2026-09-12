@@ -16,11 +16,11 @@ function LiquidityBand() {
     <FeatureBand
       image="/art/07_markets_hub_liquidity_pricing.jpg"
       eyebrow="Liquidity"
-      title="Priced from the same book the banks use."
-      lead="Quotes are aggregated from several bank and non-bank providers and passed through. There is no dealing desk deciding what you see."
+      title="Institutional pricing, aggregated and passed through."
+      lead="Quotes are aggregated from several bank and non-bank providers. We may hedge a position with a liquidity provider or take it on our own book — see the Client Agreement and our Conflicts of Interest Policy."
       items={[
         { title: 'Aggregated feeds', text: 'Several providers compete for every fill, so the top of book holds through data releases and session opens.' },
-        { title: 'No dealing desk', text: 'Orders route straight to liquidity. We never trade against a client position.' },
+        { title: 'How your order is handled', text: 'Orders are routed to our liquidity providers or executed by us as principal, depending on the instrument and conditions at the time.' },
         { title: 'Costs you can see', text: 'Raw accounts show spread and commission separately; Standard rolls them into one spread. Nothing is hidden in either.' },
       ]}
       cta={<Btn to="/accounts">Compare accounts <ArrowIcon /></Btn>}

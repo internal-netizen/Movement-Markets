@@ -117,7 +117,7 @@ export default function PlatformsHub() {
                   ['Install', 'Desktop, mobile apps', 'None, browser only'],
                   ['Automated trading', 'Algos & indicators', 'No'],
                   ['Depth of Market', 'Yes', 'No'],
-                  ['Charting', '38 indicators, 21 timeframes', '80+ indicators, TradingView charts'],
+                  ['Charting', 'Full indicator library, multiple timeframes', 'Full indicator library in the browser'],
                   ['One-click trading', 'Yes', 'Yes'],
                   ['Account', 'Shared', 'Shared'],
                 ].map(([k, a, b]) => <tr key={k}><td className="sym">{k}</td><td>{a}</td><td>{b}</td></tr>)}

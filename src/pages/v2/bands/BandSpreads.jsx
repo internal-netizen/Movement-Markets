@@ -105,7 +105,7 @@ export default function BandSpreads({ theme = 'dark' }) {
             <tr>
               <th style={S.th[theme]}>Instrument</th>
               <th className="mb-hide-sm" style={S.th[theme]}>Category</th>
-              <th style={S.thRight[theme]}>Typical spread (pips)</th>
+              <th style={S.thRight[theme]}>Typical spread</th>
               <th style={S.thRight[theme]}>Min spread</th>
             </tr>
           </thead>

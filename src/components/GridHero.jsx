@@ -45,7 +45,7 @@ export default function GridHero() {
             <span className="mh-line"><span>No middleman.</span></span>
           </h1>
           <p className="mh-lead">
-            Institutional pricing on 300+ markets, maximum leverage up to 1:500 and orders filled in about 12 milliseconds.
+            Institutional pricing on 300+ markets, maximum leverage up to 1:500 and orders filled in a median 12 milliseconds.
           </p>
           <div className="mh-cta-row">
             <Link className="mh-btn" to="/login">Open an account</Link>

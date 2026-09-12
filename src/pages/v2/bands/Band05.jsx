@@ -270,7 +270,7 @@ export default function Band05({ theme = 'dark' }) {
                         <br data-dc-tpl="389" />
                         under 15ms
                       </div>
-                      <div className="mb-p" data-dc-tpl="390" style={S.s16}>Median fill time on the major pairs in liquid sessions.</div>
+                      <div className="mb-p" data-dc-tpl="390" style={S.s16}>The target that sits alongside our median 12ms fill on the major pairs in liquid sessions.</div>
                     </div>
                     {/* Background Graphic 2 */}
                     <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style={{position: 'absolute', top: '0', right: '-20px', width: '220px', height: '220px', opacity: 0.15, zIndex: 1}}>

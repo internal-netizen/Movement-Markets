@@ -180,7 +180,7 @@ export default function Band13({ theme = 'dark' }) {
       <div data-dc-tpl="600" style={S.s1[theme]}>
         <div data-dc-tpl="601" style={S.s2} />
         <div data-dc-tpl="602" style={S.s3}>
-          <div data-dc-tpl="603" style={S.s4[theme]}>OPEN IN UNDER TEN MINUTES</div>
+          <div data-dc-tpl="603" style={S.s4[theme]}>OPEN IN MINUTES</div>
           <div data-dc-tpl="604" style={S.s5[theme]}>Start trading with Movement Markets</div>
           <div data-dc-tpl="605" style={S.s6[theme]}>Fund when you are ready. Talk to a dealer first if you would rather. No obligation either way.</div>
           <div data-dc-tpl="606" style={S.s7}>
