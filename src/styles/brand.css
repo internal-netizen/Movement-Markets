@@ -1,3 +1,5 @@
+/* Canonical Movement Markets wordmark: Montserrat 700 / 300, hosted locally. */
+@font-face{font-family:'Movement Wordmark';font-style:normal;font-weight:100 900;font-display:swap;src:url('/fonts/montserrat-latin.woff2') format('woff2')}
 /* ---------------------------------------------------------------------------
    Brand mark and wordmark. The mark's near panel takes the current text
    colour, so it reads black on light chrome and white on dark without any
@@ -7,7 +9,7 @@
 .logo.is-stacked { flex-direction: column; gap: 14px; }
 .logo-mark { display: block; flex: none; width: 24px; height: auto; }
 .logo-word {
-  font-family: 'Montserrat', 'Inter', -apple-system, sans-serif;
+  font-family: 'Movement Wordmark', 'Montserrat', sans-serif;
   font-size: 15.5px;
   font-weight: 300;
   letter-spacing: -.005em;

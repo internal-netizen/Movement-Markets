@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
  *
  * One dark stage, two families. Space Grotesk carries the headline and the
  * numerals; Inter carries everything else. The left column is the copy in
- * reading order; the right is a single silver render hanging from the top of
- * the stage with one data chip beside it. A hairline strip of conditions
+ * reading order; the right is the canonical two-panel gateway rendered in silver and lime.
+ * The artwork has its own responsive column and keeps its full proportions. A hairline strip of conditions
  * closes the stage.
  */
 export default function GridHero() {
@@ -30,12 +30,7 @@ export default function GridHero() {
   }, []);
 
   return (
-    <section className="mh-stage mh-enter" aria-labelledby="mh-title">
-      <div className="mh-bg" aria-hidden="true">
-        <div className="mh-glow" />
-        <img ref={artRef} className="mh-art" src="/art/01_home_raw_spreads.jpg" alt="" decoding="async" fetchPriority="high" />
-      </div>
-
+    <section className="mh-stage mh-gateway-stage mh-enter" aria-labelledby="mh-title">
       <div className="mh-inner">
         <div className="mh-copy">
           <p className="mh-eyebrow"><span className="mh-eyebrow-brand">Movement Markets <i /></span> Raw-spread forex &amp; CFD broker</p>
@@ -57,6 +52,7 @@ export default function GridHero() {
         </div>
 
         <div className="mh-visual" aria-hidden="true">
+          <img ref={artRef} className="mh-gateway-art" src="/art/brand-gateway-hero.png" alt="" width="1254" height="1254" decoding="async" fetchPriority="high" />
           <div className="mh-chip">
             <span className="mh-dot" />
             <strong>12 ms</strong>

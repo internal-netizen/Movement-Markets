@@ -25,13 +25,13 @@
   --pg-down: #d64545;
 }
 .mm-design[data-theme="dark"] {
-  --pg-ink: #f4f6f4;
-  --pg-muted: #a0a8a2;
-  --pg-faint: #6f7772;
+  --pg-ink: #f4f4f4;
+  --pg-muted: #b0b0b0;
+  --pg-faint: #8a8a8a;
   --pg-bg: #0c0c0c;
-  --pg-surface: #141618;
-  --pg-surface-2: #1b1e21;
-  --pg-line: rgba(255, 255, 255, .1);
+  --pg-surface: #1c1c1c;
+  --pg-surface-2: #161616;
+  --pg-line: #262626;
   --pg-accent-soft: rgba(176,240,0, .12);
   --pg-up: #6fe08f;
   --pg-down: #ff7b7b;

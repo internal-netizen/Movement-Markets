@@ -30,13 +30,31 @@ export default function SiteHeader({ theme, onToggleTheme }) {
   useEffect(() => { setOpen(null); setMobileOpen(false); }, [pathname]);
 
   useEffect(() => {
-    if (open === null) return undefined;
-    const onKey = (e) => { if (e.key === 'Escape') setOpen(null); };
-    const onDown = (e) => { if (rootRef.current && !rootRef.current.contains(e.target)) setOpen(null); };
+    if (open === null && !mobileOpen) return undefined;
+    const onKey = (e) => {
+      if (e.key === 'Escape') {
+        setOpen(null);
+        setMobileOpen(false);
+        if (mobileOpen) rootRef.current?.querySelector('.mobile-toggle')?.focus();
+      }
+    };
+    const onDown = (e) => {
+      if (rootRef.current && !rootRef.current.contains(e.target)) {
+        setOpen(null);
+        setMobileOpen(false);
+      }
+    };
     window.addEventListener('keydown', onKey);
     window.addEventListener('pointerdown', onDown);
     return () => { window.removeEventListener('keydown', onKey); window.removeEventListener('pointerdown', onDown); };
-  }, [open]);
+  }, [open, mobileOpen]);
+
+  useEffect(() => {
+    const desktop = window.matchMedia('(min-width: 1181px)');
+    const resetMenus = () => { setOpen(null); setMobileOpen(false); };
+    desktop.addEventListener('change', resetMenus);
+    return () => { desktop.removeEventListener('change', resetMenus); clearTimeout(closeTimer.current); };
+  }, []);
 
   const show = (i) => { clearTimeout(closeTimer.current); setOpen(i); };
   const hide = () => { clearTimeout(closeTimer.current); closeTimer.current = setTimeout(() => setOpen(null), 140); };

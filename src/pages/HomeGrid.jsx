@@ -6,7 +6,6 @@ import ChatWidget from '../components/ChatWidget.jsx';
 import MotionExperience from '../components/MotionExperience.jsx';
 import DesignPage, { HOME_ORDER } from './v2/DesignPage.jsx';
 import { mountPinnedCarousel } from '../components/PinnedCarousel.js';
-import { fitSlides } from '../components/fitSlides.js';
 import { V2 } from '../motion/presets.js';
 import { startReveal } from '../motion/reveal.js';
 import '../styles/site.css';
@@ -50,11 +49,9 @@ export default function HomeGrid() {
   useEffect(() => {
     if (!rootRef.current) return undefined;
     const stopCarousel = mountPinnedCarousel(rootRef.current);
-    const stopSlides = fitSlides(rootRef.current);
     const stopReveal = startReveal(rootRef.current);
     return () => {
       if (stopCarousel) stopCarousel();
-      stopSlides();
       stopReveal();
     };
   }, [theme]);
