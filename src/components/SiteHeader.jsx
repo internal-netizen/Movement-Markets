@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { NAV } from '../data/siteNav.js';
 import BrandLogo from './BrandLogo.jsx';
+import { CLIENT_LOGIN_URL, CLIENT_SIGNUP_URL } from '../config/portalLinks.js';
 import '../styles/nav.css';
 
 const Arrow = () => (
@@ -120,8 +121,8 @@ export default function SiteHeader({ theme, onToggleTheme }) {
             <span className="mm-theme-label" style={{ fontSize: '13px', fontWeight: 600, color: isDark ? '#aaa' : '#666' }}>{isDark ? 'Dark' : 'Light'}</span>
           </button>
         )}
-        <Link className="login-link" to="/login">Log in</Link>
-        <Link className="pill-button pill-dark" to="/login">Open account <Arrow /></Link>
+        <a className="login-link" href={CLIENT_LOGIN_URL}>Log in</a>
+        <a className="pill-button pill-dark" href={CLIENT_SIGNUP_URL}>Open account <Arrow /></a>
       </div>
 
       <div className={`mobile-menu${mobileOpen ? ' is-open' : ''}`}>
@@ -153,8 +154,8 @@ export default function SiteHeader({ theme, onToggleTheme }) {
                   Switch to {isDark ? 'light' : 'dark'} theme
                 </button>
               )}
-              <Link to="/login">Log in</Link>
-              <Link className="pill-button pill-dark" to="/login">Open account <Arrow /></Link>
+              <a href={CLIENT_LOGIN_URL}>Log in</a>
+              <a className="pill-button pill-dark" href={CLIENT_SIGNUP_URL}>Open account <Arrow /></a>
             </div>
           </nav>
         )}

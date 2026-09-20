@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { COMPANY_DETAILS } from '../data/legalDocuments.js';
 import BrandLogo from './BrandLogo.jsx';
+import { CLIENT_LOGIN_URL, CLIENT_SIGNUP_URL, PARTNER_PORTAL_URL } from '../config/portalLinks.js';
 
 export default function SiteFooter() {
   const scrollToTop = () => {
@@ -53,7 +54,8 @@ export default function SiteFooter() {
           <Link to="/accounts#compare">Spreads & Commissions</Link>
           <Link to="/#funding">Deposits &amp; Withdrawals</Link>
           <Link to="/partners">Partner Programme</Link>
-          <Link to="/login">Open an Account</Link>
+          <a href={PARTNER_PORTAL_URL}>Partner Portal</a>
+          <a href={CLIENT_SIGNUP_URL}>Open an Account</a>
         </div>
 
         <div className="footer-links">
@@ -72,7 +74,7 @@ export default function SiteFooter() {
           <Link to="/help">Help Centre</Link>
           <Link to="/insights">Insights</Link>
           <Link to="/legal">Regulatory Compliance</Link>
-          <Link to="/login">Client Portal Login</Link>
+          <a href={CLIENT_LOGIN_URL}>Client Portal Login</a>
         </div>
 
         {/* Footer Top Links Bar */}

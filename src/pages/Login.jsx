@@ -5,6 +5,7 @@ import { COMPANY_DETAILS } from '../data/legalDocuments.js';
 import '../styles/movement-home.css';
 import '../styles/pages.css';
 import '../styles/login.css';
+import { CLIENT_LOGIN_URL } from '../config/portalLinks.js';
 
 const STORE_KEY = 'mm-design-theme';
 
@@ -60,6 +61,10 @@ export default function Login() {
   const [status, setStatus] = useState('idle'); // idle | sending | sent
   const [touched, setTouched] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', country: '', password: '', remember: false, agree: false });
+
+  useEffect(() => {
+    window.location.replace(CLIENT_LOGIN_URL);
+  }, []);
 
   useEffect(() => {
     try {

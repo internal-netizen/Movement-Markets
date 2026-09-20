@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { CLIENT_SIGNUP_URL } from '../../config/portalLinks.js';
 
 export const ArrowIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
@@ -7,6 +8,7 @@ export const ArrowIcon = () => (
 /** Internal links go through the router; anything else is a plain anchor. */
 export function Btn({ to, children, ghost = false, className = '' }) {
   const cls = `pg-btn${ghost ? ' pg-btn-ghost' : ''} ${className}`.trim();
+  if (to === '/login') return <a className={cls} href={CLIENT_SIGNUP_URL}>{children}</a>;
   if (/^(https?:|mailto:|tel:)/.test(to)) return <a className={cls} href={to}>{children}</a>;
   return <Link className={cls} to={to}>{children}</Link>;
 }

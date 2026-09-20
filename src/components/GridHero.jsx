@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { CLIENT_SIGNUP_URL } from '../config/portalLinks.js';
 
 /**
  * Home hero.
@@ -43,7 +44,7 @@ export default function GridHero() {
             Institutional pricing on 300+ markets, maximum leverage up to 1:500 and orders filled in a median 12 milliseconds.
           </p>
           <div className="mh-cta-row">
-            <Link className="mh-btn" to="/login">Open an account</Link>
+            <a className="mh-btn" href={CLIENT_SIGNUP_URL}>Open an account</a>
             <Link className="mh-link" to="/accounts">
               See pricing
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>

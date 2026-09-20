@@ -2,6 +2,7 @@ import { useState } from 'react';
 import PageShell from '../components/page/PageShell.jsx';
 import { PageHero, Stats, SectionHead, Faq, Btn, ArrowIcon, Notice, FeatureBand, EditorialList, ImageCard } from '../components/page/Blocks.jsx';
 import { PARTNER_TIERS, PARTNER_PERKS } from '../data/content.js';
+import { PARTNER_PORTAL_URL } from '../config/portalLinks.js';
 
 function Estimator() {
   const [tier, setTier] = useState(PARTNER_TIERS[1]);
@@ -42,7 +43,7 @@ export default function Partners() {
         eyebrow="Partners · Introducing broker programme"
         title="Refer traders. Earn on every lot, for life."
         lead="A fixed rebate per lot on every client you introduce, paid weekly, with lifetime attribution and a dashboard that shows you exactly where it came from."
-        actions={<><Btn to="/login">Become a partner <ArrowIcon /></Btn><Btn to="/contact" ghost>Ask about custom terms</Btn></>}
+        actions={<><Btn to={PARTNER_PORTAL_URL}>Open partner portal <ArrowIcon /></Btn><Btn to="/contact" ghost>Ask about custom terms</Btn></>}
         aside={<ImageCard src="/art/16_partners_refer_traders.jpg" caption="Your network, attributed for life" />}
       />
       <section className="pg-section is-tight">
@@ -92,7 +93,7 @@ export default function Partners() {
           { title: 'Share your link', text: 'Tracking links, banners and landing pages from the partner kit.' },
           { title: 'Get paid weekly', text: 'A rebate on every lot your clients trade, for as long as they trade.' },
         ]}
-        cta={<Btn to="/login">Become a partner <ArrowIcon /></Btn>}
+        cta={<Btn to={PARTNER_PORTAL_URL}>Open partner portal <ArrowIcon /></Btn>}
       />
       <Faq eyebrow="Partners" items={[
         { q: 'Who can become a partner?', a: 'Anyone with an audience of traders: educators, signal providers, community owners, content creators and regional introducers. Apply from your client portal; approval usually takes a day.' },
