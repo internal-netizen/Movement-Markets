@@ -1,6 +1,8 @@
 // BandWhyUs — Why Movement Markets differentiators.
 // Follows the project's band pattern: theme prop + per-theme S style objects.
 
+import { CLIENT_SIGNUP_URL } from '../../../config/portalLinks.js';
+
 const PILLARS = [
   {
     number: '01',
@@ -108,7 +110,7 @@ export default function BandWhyUs({ theme = 'dark' }) {
             <p style={S.subText[theme]}>
               Every decision we make is optimised for the trader — not the margin sheet. Here's what that looks like in practice.
             </p>
-            <a href="/login" style={S.ctaBtn[theme]}>
+            <a href={CLIENT_SIGNUP_URL} style={S.ctaBtn[theme]}>
               Open account
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>

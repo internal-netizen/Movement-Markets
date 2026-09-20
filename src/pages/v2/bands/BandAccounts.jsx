@@ -1,6 +1,8 @@
 // BandAccounts — Account type tier comparison.
 // Follows the project's band pattern: theme prop + per-theme S style objects.
 
+import { CLIENT_SIGNUP_URL } from '../../../config/portalLinks.js';
+
 const ACCOUNTS = [
   {
     name: 'Standard',
@@ -165,7 +167,7 @@ export default function BandAccounts({ theme = 'dark' }) {
                 </div>
                 <div style={S.divider[theme]} />
                 <div style={S.ctaWrap}>
-                  <a href="/login" style={btnStyle}>{acc.cta}</a>
+                  <a href={CLIENT_SIGNUP_URL} style={btnStyle}>{acc.cta}</a>
                 </div>
               </div>
             );

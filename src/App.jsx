@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import HomeGrid from './pages/HomeGrid.jsx';
-import Login from './pages/Login.jsx';
 import NotFound from './pages/NotFound.jsx';
 import Legal from './pages/Legal.jsx';
 import CookieConsent from './components/CookieConsent.jsx';
@@ -18,6 +17,7 @@ import Tools from './pages/Tools.jsx';
 import EconomicCalendar from './pages/tools/EconomicCalendar.jsx';
 import MarketHours from './pages/tools/MarketHours.jsx';
 import Calculators from './pages/tools/Calculators.jsx';
+import { CLIENT_LOGIN_URL } from './config/portalLinks.js';
 
 const TITLES = {
   '/': 'Movement Markets — Trade the Move',
@@ -35,6 +35,11 @@ const TITLES = {
   '/general-business-terms': 'General Business Terms | Movement Markets',
 };
 
+function ExternalRedirect({ to }) {
+  if (typeof window !== 'undefined') window.location.replace(to);
+  return null;
+}
+
 export default function App() {
   const { pathname } = useLocation();
 
@@ -49,7 +54,7 @@ export default function App() {
       <IntroLoader />
       <Routes>
         <Route path="/" element={<HomeGrid />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<ExternalRedirect to={CLIENT_LOGIN_URL} />} />
         {/* Trading */}
         <Route path="/markets" element={<MarketsHub />} />
         <Route path="/markets/:slug" element={<MarketPage />} />
