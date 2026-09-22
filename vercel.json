@@ -3,7 +3,7 @@
   "redirects": [
     {
       "source": "/login",
-      "destination": "https://movementmarkets.vercel.app/auth",
+      "destination": "https://my.movementmarkets.com/auth",
       "permanent": false
     }
   ],
