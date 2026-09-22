@@ -1,29 +1,15 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import useSiteTheme from '../hooks/useSiteTheme.js';
 import SiteHeader from '../components/SiteHeader.jsx';
 import SiteFooter from '../components/SiteFooter.jsx';
 import { COMPANY_DETAILS, LEGAL_DOCUMENTS, COOKIE_CATEGORIES } from '../data/legalDocuments.js';
 import '../styles/site.css';
 import '../styles/movement-home.css';
 
-const STORE_KEY = 'mm-design-theme';
-
-function initialTheme() {
-  try {
-    const saved = localStorage.getItem(STORE_KEY);
-    if (saved === 'light' || saved === 'dark') return saved;
-  } catch {
-    // fallback
-  }
-  if (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    return 'light';
-  }
-  return 'dark';
-}
-
 export default function Legal({ defaultDoc }) {
   const { docId } = useParams();
-  const [theme, setTheme] = useState(initialTheme);
+  const [theme, toggleTheme] = useSiteTheme();
   const isDark = theme === 'dark';
   const [consentData, setConsentData] = useState(null);
 
@@ -36,7 +22,6 @@ export default function Legal({ defaultDoc }) {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    document.title = `${activeDoc.title} | ${COMPANY_DETAILS.shortName}`;
   }, [activeDoc]);
 
   // Load and listen for cookie consent updates
@@ -63,26 +48,6 @@ export default function Legal({ defaultDoc }) {
     window.addEventListener('cookie-consent-updated', handleUpdated);
     return () => window.removeEventListener('cookie-consent-updated', handleUpdated);
   }, []);
-
-  useEffect(() => {
-    try {
-      document.documentElement.setAttribute('data-theme', theme);
-    } catch {
-      // ignore
-    }
-  }, [theme]);
-
-  const toggleTheme = () => {
-    const next = isDark ? 'light' : 'dark';
-    setTheme(next);
-    try {
-      localStorage.setItem(STORE_KEY, next);
-      document.documentElement.setAttribute('data-theme', next);
-      window.dispatchEvent(new CustomEvent('mm-theme-change', { detail: next }));
-    } catch {
-      // ignore
-    }
-  };
 
   const handleOpenCookieSettings = () => {
     if (typeof window !== 'undefined') {
@@ -134,7 +99,7 @@ export default function Legal({ defaultDoc }) {
             Regulatory & Legal Compliance
           </div>
 
-          <h1 style={{
+          <p style={{
             fontSize: 'clamp(32px, 4vw, 54px)',
             fontWeight: '600',
             lineHeight: '1.1',
@@ -142,7 +107,7 @@ export default function Legal({ defaultDoc }) {
             margin: '0 0 16px 0',
           }}>
             Legal Documents & Policies
-          </h1>
+          </p>
 
           <p style={{
             fontSize: '16px',
@@ -268,9 +233,9 @@ export default function Legal({ defaultDoc }) {
                 }}>
                   {activeDoc.category}
                 </span>
-                <h2 style={{ fontSize: 'clamp(24px, 3vw, 34px)', fontWeight: '600', margin: '0 0 8px 0', letterSpacing: '-0.02em' }}>
+                <h1 style={{ fontSize: 'clamp(24px, 3vw, 34px)', fontWeight: '600', margin: '0 0 8px 0', letterSpacing: '-0.02em' }}>
                   {activeDoc.title}
-                </h2>
+                </h1>
                 <div style={{ fontSize: '13px', color: isDark ? '#888' : '#777' }}>
                   Last Updated: {activeDoc.lastUpdated} · Official Policy Document
                 </div>

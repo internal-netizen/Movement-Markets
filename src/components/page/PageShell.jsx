@@ -27,10 +27,6 @@ export default function PageShell({ title, children, cta = true }) {
   // Reveal, count-up and parallax — re-armed whenever the route changes.
   useEffect(() => startReveal(rootRef.current), [pathname]);
 
-  useEffect(() => {
-    if (title) document.title = `${title} | Movement Markets`;
-  }, [title]);
-
   // New page: start at the top, unless the URL points at a section.
   useEffect(() => {
     if (hash) {

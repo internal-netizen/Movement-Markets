@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import HomeGrid from './pages/HomeGrid.jsx';
 import NotFound from './pages/NotFound.jsx';
 import Legal from './pages/Legal.jsx';
@@ -18,22 +17,7 @@ import EconomicCalendar from './pages/tools/EconomicCalendar.jsx';
 import MarketHours from './pages/tools/MarketHours.jsx';
 import Calculators from './pages/tools/Calculators.jsx';
 import { CLIENT_LOGIN_URL } from './config/portalLinks.js';
-
-const TITLES = {
-  '/': 'Movement Markets — Trade the Move',
-  '/login': 'Login | Movement Markets',
-  '/legal': 'Legal Documents & Policies | Movement Markets',
-  '/terms': 'Website Terms of Use | Movement Markets',
-  '/privacy': 'Privacy Policy | Movement Markets',
-  '/cookies': 'Cookie Policy | Movement Markets',
-  '/cookie-policy': 'Cookie Policy | Movement Markets',
-  '/risk-disclosure': 'General Risk Disclosure | Movement Markets',
-  '/aml-kyc': 'AML & KYC Policy | Movement Markets',
-  '/client-agreement': 'Client Agreement | Movement Markets',
-  '/affiliate-agreement': 'Affiliate Agreement | Movement Markets',
-  '/affiliates': 'Affiliate Agreement | Movement Markets',
-  '/general-business-terms': 'General Business Terms | Movement Markets',
-};
+import SeoHead from './seo/SeoHead.jsx';
 
 function ExternalRedirect({ to }) {
   if (typeof window !== 'undefined') window.location.replace(to);
@@ -41,16 +25,9 @@ function ExternalRedirect({ to }) {
 }
 
 export default function App() {
-  const { pathname } = useLocation();
-
-  // Inner pages set their own titles through <PageShell>; only the routes
-  // listed above are titled here.
-  useEffect(() => {
-    if (TITLES[pathname]) document.title = TITLES[pathname];
-  }, [pathname]);
-
   return (
     <>
+      <SeoHead />
       <IntroLoader />
       <Routes>
         <Route path="/" element={<HomeGrid />} />

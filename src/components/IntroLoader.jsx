@@ -21,7 +21,9 @@ function shouldPlay() {
 }
 
 export default function IntroLoader() {
-  const [playing, setPlaying] = useState(shouldPlay);
+  const [playing, setPlaying] = useState(false);
+
+  useEffect(() => { setPlaying(shouldPlay()); }, []);
 
   useEffect(() => {
     if (!playing) return undefined;

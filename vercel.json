@@ -1,11 +1,16 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
   "redirects": [
     {
       "source": "/login",
       "destination": "https://my.movementmarkets.com/auth",
       "permanent": false
+    },
+    {
+      "source": "/v2",
+      "destination": "/",
+      "permanent": true
     }
-  ],
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  ]
 }

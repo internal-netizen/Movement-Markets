@@ -70,3 +70,5 @@ env/
 
 # Vite cache
 .vite/
+
+.prerender-server/

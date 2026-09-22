@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useSyncExternalStore } from 'react';
 
 const KEY = 'mm-design-theme';
 const EVENT = 'mm-theme-change';
 const valid = (value) => value === 'light' || value === 'dark';
 
 function readTheme() {
+  if (typeof window === 'undefined') return 'dark';
   try {
     const saved = localStorage.getItem(KEY);
     if (valid(saved)) return saved;
@@ -14,32 +15,29 @@ function readTheme() {
   return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
 }
 
+function subscribe(onChange) {
+  const sync = (event) => { if (valid(event.detail)) onChange(); };
+  const storage = (event) => { if (event.key === KEY) onChange(); };
+  window.addEventListener(EVENT, sync);
+  window.addEventListener('storage', storage);
+  return () => {
+    window.removeEventListener(EVENT, sync);
+    window.removeEventListener('storage', storage);
+  };
+}
+
 export default function useSiteTheme() {
-  const [theme, setTheme] = useState(readTheme);
+  const theme = useSyncExternalStore(subscribe, readTheme, () => 'dark');
   useEffect(() => {
-    const sync = (event) => { if (valid(event.detail)) setTheme(event.detail); };
-    const storage = (event) => {
-      if (event.key !== KEY || !valid(event.newValue)) return;
-      document.documentElement.dataset.theme = event.newValue;
-      document.documentElement.style.colorScheme = event.newValue;
-      setTheme(event.newValue);
-    };
-    window.addEventListener(EVENT, sync);
-    window.addEventListener('storage', storage);
-    document.documentElement.dataset.theme = readTheme();
-    document.documentElement.style.colorScheme = readTheme();
-    return () => {
-      window.removeEventListener(EVENT, sync);
-      window.removeEventListener('storage', storage);
-    };
-  }, []);
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+  }, [theme]);
 
   const toggleTheme = () => {
-    const next = readTheme() === 'dark' ? 'light' : 'dark';
+    const next = theme === 'dark' ? 'light' : 'dark';
     document.documentElement.dataset.theme = next;
     document.documentElement.style.colorScheme = next;
     try { localStorage.setItem(KEY, next); } catch { /* optional persistence */ }
-    setTheme(next);
     window.dispatchEvent(new CustomEvent(EVENT, { detail: next }));
   };
   return [theme, toggleTheme];
