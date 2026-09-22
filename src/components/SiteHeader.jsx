@@ -107,18 +107,10 @@ export default function SiteHeader({ theme, onToggleTheme }) {
 
       <div className="header-actions">
         {onToggleTheme && (
-          <button
-            type="button"
-            className="mm-theme-switch-nav"
-            onClick={onToggleTheme}
-            aria-pressed={!isDark}
-            aria-label={`Switch to ${isDark ? 'light' : 'dark'} theme`}
-            style={{ marginRight: '16px', background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' }}
-          >
-            <span className="mm-theme-track" style={{ position: 'relative', display: 'inline-block', width: '40px', height: '22px', borderRadius: '12px', background: isDark ? '#333' : '#d0d4e2', transition: 'background 0.2s' }}>
-              <span className="mm-theme-knob" style={{ position: 'absolute', top: '3px', left: isDark ? '21px' : '3px', width: '16px', height: '16px', borderRadius: '8px', background: isDark ? '#b0f000' : '#fff', transition: 'left 0.2s' }} />
-            </span>
-            <span className="mm-theme-label" style={{ fontSize: '13px', fontWeight: 600, color: isDark ? '#aaa' : '#666' }}>{isDark ? 'Dark' : 'Light'}</span>
+          <button type="button" className="mm-theme-control" role="switch"
+            aria-checked={isDark} aria-label="Dark mode" onClick={onToggleTheme}>
+            <span className="mm-theme-control-track" aria-hidden="true"><span className="mm-theme-control-thumb" /></span>
+            <span>{isDark ? 'Dark' : 'Light'}</span>
           </button>
         )}
         <a className="login-link" href={CLIENT_LOGIN_URL}>Log in</a>
@@ -150,7 +142,7 @@ export default function SiteHeader({ theme, onToggleTheme }) {
             ))}
             <div className="mobile-actions">
               {onToggleTheme && (
-                <button type="button" className="mobile-theme" onClick={onToggleTheme}>
+                <button type="button" className="mobile-theme" role="switch" aria-checked={isDark} aria-label="Dark mode" onClick={onToggleTheme}>
                   Switch to {isDark ? 'light' : 'dark'} theme
                 </button>
               )}

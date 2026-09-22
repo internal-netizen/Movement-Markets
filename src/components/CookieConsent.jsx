@@ -1,3 +1,4 @@
+import useSiteTheme from '../hooks/useSiteTheme.js';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { COOKIE_CATEGORIES, COMPANY_DETAILS } from '../data/legalDocuments.js';
@@ -10,53 +11,17 @@ import {
 } from '../utils/cookieConsent.js';
 import '../styles/cookie-consent.css';
 
-const THEME_KEY = 'mm-design-theme';
 
 export default function CookieConsent() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('consent'); // 'consent' | 'details' | 'about'
-  const [theme, setTheme] = useState(() => {
-    try {
-      const saved = localStorage.getItem(THEME_KEY);
-      if (saved === 'light' || saved === 'dark') return saved;
-      if (document.documentElement.getAttribute('data-theme')) return document.documentElement.getAttribute('data-theme');
-    } catch {
-      // fallback
-    }
-    if (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      return 'light';
-    }
-    return 'dark';
-  });
+  const [theme] = useSiteTheme();
   const [preferences, setPreferences] = useState({
     necessary: true,
     preferences: true,
     statistics: true,
     marketing: false,
   });
-
-  // Track site theme changes
-  useEffect(() => {
-    const handleThemeChange = (e) => {
-      if (e.detail === 'light' || e.detail === 'dark') {
-        setTheme(e.detail);
-      } else {
-        const current = document.documentElement.getAttribute('data-theme') || localStorage.getItem(THEME_KEY) || 'dark';
-        setTheme(current);
-      }
-    };
-
-    window.addEventListener('mm-theme-change', handleThemeChange);
-    window.addEventListener('storage', (e) => {
-      if (e.key === THEME_KEY && (e.newValue === 'light' || e.newValue === 'dark')) {
-        setTheme(e.newValue);
-      }
-    });
-
-    return () => {
-      window.removeEventListener('mm-theme-change', handleThemeChange);
-    };
-  }, []);
 
   // Initialize consent state, establish Google Consent Mode default, and register window.Cookiebot API
   useEffect(() => {

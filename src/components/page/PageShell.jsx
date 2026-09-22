@@ -1,4 +1,5 @@
-import { createContext, useEffect, useRef, useState } from 'react';
+import useSiteTheme from '../../hooks/useSiteTheme.js';
+import { createContext, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import SiteHeader from '../SiteHeader.jsx';
 import SiteFooter from '../SiteFooter.jsx';
@@ -9,23 +10,9 @@ import '../../styles/site.css';
 import '../../styles/movement-home.css';
 import '../../styles/pages.css';
 
-const STORE_KEY = 'mm-design-theme';
 
 /** The active theme, for children that render third-party embeds. */
 export const ThemeContext = createContext('dark');
-
-function initialTheme() {
-  try {
-    const saved = localStorage.getItem(STORE_KEY);
-    if (saved === 'light' || saved === 'dark') return saved;
-  } catch {
-    // storage unavailable — fall through to the system preference
-  }
-  if (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    return 'light';
-  }
-  return 'dark';
-}
 
 /**
  * Chrome shared by every inner page: the site header with the theme switch,
@@ -33,7 +20,7 @@ function initialTheme() {
  * the same key the home page uses, so it follows the visitor between pages.
  */
 export default function PageShell({ title, children, cta = true }) {
-  const [theme, setTheme] = useState(initialTheme);
+  const [theme, toggleTheme] = useSiteTheme();
   const { pathname, hash } = useLocation();
   const rootRef = useRef(null);
 
@@ -53,19 +40,11 @@ export default function PageShell({ title, children, cta = true }) {
     window.scrollTo({ top: 0 });
   }, [pathname, hash]);
 
-  useEffect(() => {
-    try {
-      localStorage.setItem(STORE_KEY, theme);
-      document.documentElement.setAttribute('data-theme', theme);
-    } catch {
-      // the choice just will not persist
-    }
-  }, [theme]);
 
   return (
     <ThemeContext.Provider value={theme}>
       <div className="mm-design mm-page" data-theme={theme} ref={rootRef}>
-        <SiteHeader theme={theme} onToggleTheme={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />
+        <SiteHeader theme={theme} onToggleTheme={toggleTheme} />
         <main className="pg">{children}</main>
         {cta ? <CtaBand /> : null}
         <SiteFooter />

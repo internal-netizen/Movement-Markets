@@ -1,3 +1,5 @@
+import MarketDiagram from '../../../components/MarketDiagram.jsx';
+import '../../../styles/landing-details.css';
 // Design band 05.
 // Generated from src/design/movement-home-{dark,light}.html by
 // tools/build-design-react.mjs — structure is shared, styles are per theme.
@@ -250,32 +252,24 @@ export default function Band05({ theme = 'dark' }) {
               </div>
               <div data-dc-tpl="381" style={S.s8}>
                 <div className="mb-cards" data-dc-tpl="382" style={S.s9}>
-                  <div data-dc-tpl="383" style={{...S.s10[theme], position: 'relative', overflow: 'hidden'}}>
+                  <div data-dc-tpl="383" className="technology-card" style={{...S.s10[theme], position: 'relative', overflow: 'hidden'}}>
                     <div style={{ position: 'relative', zIndex: 2 }}>
                       <div className="mb-sub" data-dc-tpl="384" style={S.s11[theme]}>Availability target</div>
                       <div className="mb-big" data-dc-tpl="385" style={S.s12[theme]}>99.9%</div>
-                      <div className="mb-p" data-dc-tpl="386" style={S.s13[theme]}>Uptime target across pricing, routing and platform access.</div>
+                      <div className="mb-p" data-dc-tpl="386" style={{...S.s13[theme], color: 'var(--detail-muted)'}}>Uptime target across pricing, routing and platform access.</div>
                     </div>
-                    {/* Background Graphic 1 */}
-                    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style={{position: 'absolute', bottom: '-40px', right: '-40px', width: '250px', height: '250px', opacity: 0.05, zIndex: 1}}>
-                      <rect x="20" y="20" width="160" height="160" rx="20" stroke={theme === 'dark' ? '#fff' : '#000'} strokeWidth="4" />
-                      <circle cx="100" cy="100" r="40" stroke={theme === 'dark' ? '#fff' : '#000'} strokeWidth="4" />
-                      <path d="M100 20 V60 M100 140 V180 M20 100 H60 M140 100 H180" stroke={theme === 'dark' ? '#fff' : '#000'} strokeWidth="4" />
-                    </svg>
+                    <div className="technology-diagram"><MarketDiagram kind="availability" /></div>
                   </div>
-                  <div data-dc-tpl="387" style={{...S.s14, position: 'relative', overflow: 'hidden'}}>
+                  <div data-dc-tpl="387" className="technology-card technology-card-lime" style={{...S.s14, position: 'relative', overflow: 'hidden'}}>
                     <div style={{ position: 'relative', zIndex: 2 }}>
                       <div className="mb-sub" data-dc-tpl="388" style={S.s15[theme]}>
                         Execution target
                         <br data-dc-tpl="389" />
                         under 15ms
                       </div>
-                      <div className="mb-p" data-dc-tpl="390" style={S.s16}>The target that sits alongside our median 12ms fill on the major pairs in liquid sessions.</div>
+                      <div className="mb-p" data-dc-tpl="390" style={{...S.s16, color: 'var(--detail-muted)'}}>The target that sits alongside our median 12ms fill on the major pairs in liquid sessions.</div>
                     </div>
-                    {/* Background Graphic 2 */}
-                    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style={{position: 'absolute', top: '0', right: '-20px', width: '220px', height: '220px', opacity: 0.15, zIndex: 1}}>
-                      <path d="M20 180 L180 20 M60 180 L180 60 M20 140 L140 20 M100 180 L180 100" stroke="#000" strokeWidth="8" strokeLinecap="round" />
-                    </svg>
+                    <div className="technology-diagram"><MarketDiagram kind="speed" /></div>
                   </div>
                 </div>
                 <div className="mb-h" data-dc-tpl="391" style={S.s17[theme]}>

@@ -1,0 +1,89 @@
+/* Shared, restrained diagram palette; lime is a highlight, not body text. */
+.mm-design {
+  --detail-ink: #f4f4f4; --detail-muted: #a5aaa6; --detail-panel: #191b19;
+  --detail-ground: #111311; --detail-border: #353a35; --detail-line: #798479;
+  --detail-grid: #252d25; --detail-accent: #b0f000; --detail-soft: #303a2c;
+  --detail-wash: #263419; --instrument-ring: #171917;
+}
+.mm-design[data-theme="light"] {
+  --detail-ink: #171c18; --detail-muted: #5d695f; --detail-panel: #fff;
+  --detail-ground: #f4f7f1; --detail-border: #dce3d8; --detail-line: #82917d;
+  --detail-grid: #e5ebdf; --detail-accent: #547700; --detail-soft: #dfe7d7;
+  --detail-wash: #ebf5d8; --instrument-ring: #fff;
+}
+.instrument-art { display: block; width: 48px; height: 46px; flex: 0 0 48px; overflow: visible; }
+.market-diagram { display: block; width: 100%; height: 100%; overflow: visible; }
+.market-diagram text { fill: var(--detail-ink); font: 500 12px 'Inter', sans-serif; }
+.market-diagram .diagram-label { fill: var(--detail-muted); font-size: 11px; }
+.market-diagram .diagram-emphasis { font-size: 21px; font-weight: 600; }
+.diagram-grid { stroke: var(--detail-grid); stroke-width: 1; }
+.diagram-panel { fill: var(--detail-panel); stroke: var(--detail-border); stroke-width: 1.5; }
+.diagram-soft { fill: var(--detail-soft); }
+.diagram-wash { fill: var(--detail-wash); }
+.diagram-accent { fill: var(--detail-accent); }
+.diagram-muted-line { stroke: var(--detail-line); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.diagram-accent-line { stroke: var(--detail-accent); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.benefits-section { max-width: 1200px; margin: 0 auto; padding: 100px 40px 0; color: var(--detail-ink); }
+.benefits-heading { text-align: center; margin-bottom: 42px; }
+.benefits-heading > p { font-size: 15px; color: var(--detail-accent); margin: 0 0 20px; }
+.benefits-heading h2 { font-size: clamp(30px,4vw,44px); font-weight: 500; letter-spacing: -.035em; line-height: 1.2; margin: 0; }
+.benefits-heading h2 span { color: var(--detail-muted); }
+.benefits-grid { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 20px; }
+.benefit-card { grid-column: span 2; min-width: 0; overflow: hidden; border: 1px solid var(--detail-border); border-radius: 22px; background: var(--detail-panel); }
+.benefit-visual { height: 206px; padding: 24px 22px 12px; background: var(--detail-ground); border-bottom: 1px solid var(--detail-border); }
+.benefit-copy { padding: 25px 26px 30px; }
+.benefit-copy h3 { font-size: 22px; line-height: 1.25; letter-spacing: -.025em; margin: 0 0 12px; font-weight: 500; }
+.benefit-copy p { color: var(--detail-muted); font-size: 14px; line-height: 1.65; margin: 0; }
+.benefit-card-wide { grid-column: span 3; display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; }
+.benefit-card-wide .benefit-visual { grid-column: 2; grid-row: 1; height: 174px; border-bottom: 0; border-left: 1px solid var(--detail-border); padding: 16px 10px; }
+.benefit-card-wide .benefit-copy { grid-row: 1; grid-column: 1; padding: 26px; }
+.benefits-details { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px 28px; padding: 0; margin: 30px 0 0; list-style: none; }
+.benefits-details li { display: flex; align-items: center; gap: 8px; color: var(--detail-muted); font: 13px/1.5 var(--font-body); }
+.benefits-details svg { color: var(--detail-accent); width: 20px; height: 20px; flex: none; }
+/* Each illustration resolves once when it enters view; no perpetual pulses. */
+.benefit-card.is-seen .diagram-draw { animation: detail-draw 1000ms ease-out both; }
+.benefit-card.is-seen .diagram-candle { animation: detail-build 700ms cubic-bezier(.2,.65,.3,1) both; animation-delay: calc(var(--order) * 55ms); transform-box: fill-box; transform-origin: bottom; }
+@keyframes detail-draw { from { stroke-dasharray: 500; stroke-dashoffset: 500; } to { stroke-dasharray: 500; stroke-dashoffset: 0; } }
+@keyframes detail-build { from { transform: translateY(8px); opacity: .25; } to { transform: translateY(0); opacity: 1; } }
+/* Technology diagrams have their own space so they cannot obscure the copy. */
+.mm-design .technology-card { display: flex; flex-direction: column; }
+.mm-design .technology-card .mb-p { color: var(--detail-muted); }
+.technology-diagram { position: relative; margin: auto -8px 0; padding-top: 24px; height: 160px; flex: none; }
+.technology-card-lime {
+  --detail-ink: #172500; --detail-muted: #364b08; --detail-panel: #c7f45c;
+  --detail-border: #709628; --detail-line: #507313; --detail-grid: #9ed52c;
+  --detail-accent: #243b00; --detail-soft: #9bd023; --detail-wash: #bdf244;
+}
+.technology-card-dark {
+  --detail-ink: #f4f4f4; --detail-muted: #c3c8c0; --detail-panel: #303630;
+  --detail-border: #6a7666; --detail-line: #99a894; --detail-grid: #353c32;
+  --detail-accent: #b0f000; --detail-soft: #3c4836; --detail-wash: #35471f;
+}
+.mm-design [data-band="technology"] .mb-media { align-self: stretch; }
+@media (max-width: 960px) {
+  .benefits-section { padding: 72px 24px 0; }
+  .benefits-grid { gap: 14px; }
+  .benefit-copy { padding: 22px 18px; }
+  .benefit-copy h3 { font-size: 20px; }
+  .benefit-visual { height: 166px; padding: 16px 10px; }
+  .benefit-card-wide { display: flex; flex-direction: column; align-items: stretch; }
+  .benefit-card-wide .benefit-visual { border-left: 0; border-bottom: 1px solid var(--detail-border); }
+}
+@media (max-width: 600px) {
+  .benefits-section { padding: 56px 20px 0; }
+  .benefits-grid { grid-template-columns: minmax(0,1fr); }
+  .benefit-card, .benefit-card-wide { grid-column: 1; }
+  .benefit-visual, .benefit-card-wide .benefit-visual { height: 178px; padding: 20px 24px; }
+  .benefit-copy, .benefit-card-wide .benefit-copy { padding: 22px 24px 26px; }
+  .instrument-art { width: 40px; height: 40px; flex-basis: 40px; }
+  .mm-design [data-band="spreads"] .mb-table { table-layout: auto; }
+  .mm-design [data-band="spreads"] .mb-table td:first-child > div { gap: 7px; }
+  .mm-design [data-band="spreads"] .mb-table td:first-child > div > div { min-width: 0; }
+  .mm-design [data-band="spreads"] .mb-table td:first-child { white-space: nowrap; }
+  .mm-design [data-band="spreads"] .mb-table td:first-child > div > div > div { font-size: 12px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .benefit-card.is-seen :is(.diagram-draw,.diagram-candle) { animation: none; }
+}
+
+.technology-diagram :is(path,rect,circle,line) { vector-effect: non-scaling-stroke; }

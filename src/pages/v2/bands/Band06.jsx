@@ -1,3 +1,5 @@
+import MarketDiagram from '../../../components/MarketDiagram.jsx';
+import '../../../styles/landing-details.css';
 // Design band 06.
 // Generated from src/design/movement-home-{dark,light}.html by
 // tools/build-design-react.mjs — structure is shared, styles are per theme.
@@ -300,7 +302,7 @@ export default function Band06({ theme = 'dark' }) {
               </div>
             </div>
             <div className="mb-row" data-dc-tpl="420" style={S.s12[theme]}>
-              <div data-dc-tpl="421" style={{...S.s13, position: 'relative', overflow: 'hidden'}}>
+              <div data-dc-tpl="421" className="technology-card technology-card-lime" style={{...S.s13, position: 'relative', overflow: 'hidden'}}>
                 <div data-dc-tpl="422" style={S.s14}>01</div>
                 <div data-dc-tpl="423" style={{...S.s15, position: 'relative', zIndex: 2}}>
                   <div className="mb-sub" data-dc-tpl="424" style={S.s16[theme]}>
@@ -308,20 +310,11 @@ export default function Band06({ theme = 'dark' }) {
                     <br data-dc-tpl="425" />
                     routing
                   </div>
-                  <div className="mb-p" data-dc-tpl="426" style={S.s17}>Orders are directed through connected liquidity pathways to support efficient execution.</div>
+                  <div className="mb-p" data-dc-tpl="426" style={{...S.s17, color: 'var(--detail-muted)'}}>Orders are directed through connected liquidity pathways to support efficient execution.</div>
                 </div>
-                {/* Tech Graphic 1 */}
-                <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style={{position: 'absolute', bottom: '-40px', right: '-20px', width: '200px', height: '200px', opacity: 0.15, zIndex: 1}}>
-                  <circle cx="100" cy="100" r="80" stroke="#000" strokeWidth="2" strokeDasharray="4 4" />
-                  <circle cx="100" cy="100" r="50" stroke="#000" strokeWidth="2" />
-                  <circle cx="100" cy="100" r="10" fill="#000" />
-                  <circle cx="156" cy="44" r="8" fill="#000" />
-                  <circle cx="44" cy="156" r="8" fill="#000" />
-                  <line x1="100" y1="100" x2="156" y2="44" stroke="#000" strokeWidth="2" />
-                  <line x1="100" y1="100" x2="44" y2="156" stroke="#000" strokeWidth="2" />
-                </svg>
+                <div className="technology-diagram"><MarketDiagram kind="routing" /></div>
               </div>
-              <div data-dc-tpl="427" style={{...S.s18[theme], position: 'relative', overflow: 'hidden'}}>
+              <div data-dc-tpl="427" className="technology-card technology-card-dark" style={{...S.s18[theme], position: 'relative', overflow: 'hidden'}}>
                 <div data-dc-tpl="428" style={S.s19[theme]}>02</div>
                 <div data-dc-tpl="429" style={{...S.s15, position: 'relative', zIndex: 2}}>
                   <div className="mb-sub" data-dc-tpl="430" style={S.s20[theme]}>
@@ -329,14 +322,9 @@ export default function Band06({ theme = 'dark' }) {
                     <br data-dc-tpl="431" />
                     on your devices
                   </div>
-                  <div className="mb-p" data-dc-tpl="432" style={S.s21[theme]}>Keep your account, watchlists and trading access consistent across supported devices.</div>
+                  <div className="mb-p" data-dc-tpl="432" style={{...S.s21[theme], color: 'var(--detail-muted)'}}>Keep your account, watchlists and trading access consistent across supported devices.</div>
                 </div>
-                {/* Tech Graphic 2 */}
-                <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style={{position: 'absolute', bottom: '-20px', right: '-10px', width: '180px', height: '180px', opacity: 0.12, zIndex: 1}}>
-                  <rect x="40" y="40" width="120" height="80" rx="8" stroke="#ffffff" strokeWidth="3" />
-                  <path d="M70 120 L50 160 H150 L130 120" stroke="#ffffff" strokeWidth="3" />
-                  <rect x="120" y="80" width="50" height="90" rx="6" fill="#262626" stroke="#ffffff" strokeWidth="3" />
-                </svg>
+                <div className="technology-diagram"><MarketDiagram kind="devices" /></div>
               </div>
               <div className="mb-media" data-dc-tpl="433" style={S.s22[theme]} />
             </div>
